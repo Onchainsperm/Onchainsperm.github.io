@@ -1,0 +1,152 @@
+body {
+  animation-name: background-color-animation;
+  animation-duration: 60s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes background-color-animation {
+  0% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+  margin-top: 2.5em;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 2.5em;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 1.25em;
+}
+
+a {
+  color: #3E8E41;
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 0.625em 1.25em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  margin: 0.25em 0.5em;
+  cursor: pointer;
+  border-radius: 0.5em;
+  transition: background-color 0.3s;
+}
+.cool-button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 0.3125em;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.chart {
+  border: 0.0625em solid #ccc;
+  padding: 0.625em;
+  margin: 0.625em 0;
+}
+
+.chart table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+}
+
+.chart table th,
+.chart table td {
+  padding: 0.3125em;
+  border: 0.0625em solid #ccc;
+}
+
+.social {
+  margin-top: 1.25em;
+}
+
+.social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social li {
+  margin: 0 0.625em;
+}
+
+.social a {
+  color: #333;
+  text-decoration: none;
+}
+
+.social i {
+  font-size: 1.5em;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons img {
+  height: 50px;
+  width: auto;
+  margin: 0 10px;
+}
+
+.social-icons a {
+  filter: brightness(100%);
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px; /* added border-radius property */
+  overflow: hidden; /* added overflow property to fix border issue */
+}
+
+.social-icons a:hover {
+  filter: brightness(150%);
+  transform: scale(1.1);
+}
+
+.social-icons a:hover img {
+  filter: invert(100%) brightness(100%);
+}
