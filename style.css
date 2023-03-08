@@ -9,6 +9,8 @@ body {
   animation-duration: 60s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+  font-family: Arial, sans-serif;
+	font-size: 16px;
 }
 
 @keyframes background-color-animation {
