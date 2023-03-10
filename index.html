@@ -100,6 +100,46 @@
 			font-size: 24px;
 		}
 	</style>
+<style>
+  .glow-border {
+    position: relative;
+    border: 2px solid #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff8, 0 0 70px #ff8, 0 0 80px #ff8, 0 0 100px #ff8, 0 0 150px #ff8;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+
+  .logo {
+    position: absolute;
+    top: -20px;
+    right: -12px;
+    width: 45px;
+    height: 45px;
+    border-radius: 20px;
+    background-color: none;
+  }
+</style>
+
+<style>
+  .glow-border {
+    border: 1px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #000000;
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee;
+    }
+    to {
+      box-shadow: 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020;
+    }
+  }
+</style>
+
 </head>
 <body>
 <style>
@@ -113,8 +153,11 @@
 </div
 <body>
 <div style="text-align:center;">
-  <img src="mylogo.gif" width="300" height="300">
+  <img src="mylogo.gif" width="300" height="300"class="glow-border">
   </div>
+  <p>
+    
+  </p>
   
 <div class="social-icons">
   <a href="https://www.facebook.com/freeload.andskins" target="_blank">
@@ -182,7 +225,10 @@
 </body>
 
 <div style="text-align:center;">
-	<h1>ONCHAIN SPERM</h1>
+<h2 class="glow-border">
+  <img src="logo.png" alt="Logo" class="logo">
+  ONCHAIN SPERM
+</h2>
 	<p>ONCHAIN SPERM is a collection of 777 unique,On-chain NFTs that are stored its Images and Metadata on the blockchain. Each sperm has its own unique characteristics, making it a one-of-a-kind collectible.</p>
 	
 	<h2>Benefits for Holding SPERM NFT?</h2>
@@ -335,7 +381,7 @@
         <table>
           <tr>
             <th>Public Sale</th>
-            <td>1-21,000 SPERMO</td>
+            <td>4,200 SPERMO</td>
           </tr>
           <tr>
             <th>Marketing</th>
