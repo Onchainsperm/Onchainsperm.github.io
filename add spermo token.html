@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+    <title>Add SPERMO To Metamask</title>
+<style>
+
+  body {
+  color: white;
+  }
+
+		body {
+      font-family: Arial, sans-serif;
+			font-size: 16px;
+			background: linear-gradient(to bottom, #8B008B, #9400D3);
+			animation: gradient 10s ease infinite;
+		}
+		
+		@keyframes gradient {
+			0% { background: linear-gradient(to bottom, #8B008B, #9400D3); }
+			50% { background: linear-gradient(to bottom, #9400D3, #8B008B); }
+			100% { background: linear-gradient(to bottom, #8B008B, #9400D3); }
+		}
+		
+		button {
+			background-color: #FF69B4;
+			color: white;
+			font-size: 18px;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0px 5px 0px #FF1493;
+			transition: all 0.2s ease;
+			cursor: pointer;
+		}
+		
+		button:hover {
+			transform: scale(1.1);
+			box-shadow: 0px 7px 0px #FF1493;
+		}
+		
+		img {
+			border: 2px none;
+			padding: 10px;
+			transition: all 0.2s ease;
+		}
+		
+		img:hover {
+			border: 2px none;
+			transform: rotate(360deg);
+		}
+		
+  img {
+  max-width: 90%;
+  height: auto;
+   }
+
+.pink-text {
+  color: pink;
+}
+
+.pink-text {
+  color: pink;
+  box-shadow: 0 0 5px 1px #ff69b4;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px 1px #ff69b4;
+  }
+  50% {
+    box-shadow: 0 0 5px 3px #ff69b4;
+  }
+  100% {
+    box-shadow: 0 0 5px 1px #ff69b4;
+  }
+}
+
+a {
+  display: inline-block;
+  background-color: #FF69B4;
+  color: white;
+  font-size: 20px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 5px 0px #FF1493;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 7px 0px #FF1493;
+}
+
+.box {
+            border: 1px solid black;
+            padding: 10px;
+            font-family: Arial;
+            max-width: 800px;
+            overflow-x: auto;
+            margin: 50px auto;
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            table-layout: fixed;
+            padding: 0;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+      button {
+        font-size: 17px;
+        padding: 8px 15px;
+        background-color:;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+
+      button:active {
+        transform: scale(1.1);
+      }
+      
+.metamask-logo {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-image: url('metamask.png');
+    background-size: cover;
+  }
+  
+.polygon-logo {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-image: url('polygon.jpg');
+    background-size: cover;
+  }
+      
+.container {
+  border: 1px solid black; /* Define a border for the container element */
+  padding: 10px; /* Add some padding to create some space between the border and the paragraphs */
+}
+
+.container p {
+  margin: 0; /* Remove default margin on the <p> tags */
+}
+
+.back-arrow {
+  margin-right: 5px;
+}
+      
+    </style>
+  </head>
+  <body>
+<a href="./buyspermo">
+    <button class="back-button" style="display: flex; align-items: center; font-size: 17px; padding: 5px 10px; height: 20px; border-radius: 3px;">
+      <span class="back-arrow">&#8592;</span>
+      
+      Back
+    </button>
+  </a>
+  </body>
+<div style="text-align:center;">
+  <body>
+    
+    <h1>SPERMO TOKEN</h1>
+            <tr>
+                <h2><img src="spermologo.png" alt="Token Logo" width="100"></h2>
+                <h2>TOKEN DETAILS</h2>
+            </tr>
+<div class="box">
+        <table>
+
+            <tr>
+                <td>Chain:</td>
+                <td>POLYGON</td>
+            </tr>
+            <tr>
+                <td>Token Name:</td>
+                <td>SPERMO TOKEN</td>
+            </tr>
+            <tr>
+                <td>Token Symbol:</td>
+                <td>SPERMO</td>
+            </tr>
+            <tr>
+                <td>Token Decimals:</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>Contract Address:</td>
+                <td>0x73cb87FdAfF7E653A2b2Ca8Ab5b53a1b4F031127</td>
+            </tr>
+        </table>
+    </div>
+<div style="display: flex; justify-content: center;">
+  <button onclick="addToken()" style="display: flex; align-items: center;">
+    <span class="metamask-logo"></span>
+    Add to Metamask
+  </button>
+</div>
+<p>
+  
+</p>
+<div style="display: flex; justify-content: center;">
+  <a href="https://polygonscan.com/token/0x73cb87FdAfF7E653A2b2Ca8Ab5b53a1b4F031127">
+    <button style="display: flex; align-items: center; font-size: 17px; padding: 5px 10px; height: 33px; border-radius: 3px;">
+      <span class="polygon-logo"></span>
+      View on Polygonscan
+    </button>
+  </a>
+</div>
+
+
+
+<p>
+  
+</p>
+<div class="container">
+    <p>After you click the "Add Token" button you will need to open your Metamask wallet and confirm the transaction to add the Token in your wallet</p>
+    <p>
+      
+    </p>
+    <p>But if you are using Desktop or Metamask Browser the confirmation will automatically pop-up after clicking the "Add Token" button</p>
+    <p>
+      
+    </p>
+    <p>Make sure that your wallet is in the "Polygon/MATIC" network before adding this Token</p>
+    </div>
+    <script>
+      async function addToken() {
+        console.log('Adding token...');
+        const tokenAddress = '0x73cb87FdAfF7E653A2b2Ca8Ab5b53a1b4F031127';
+        const tokenSymbol = 'SPERMO';
+        const tokenDecimals = 18;
+        const tokenImage = 'https://raw.githubusercontent.com/onchain123/onchain/main/spermologo.png';
+
+        if (typeof ethereum !== 'undefined') {
+          try {
+            const wasAdded = await ethereum.request({
+              method: 'wallet_watchAsset',
+              params: {
+                type: 'ERC20',
+                options: {
+                  address: tokenAddress,
+                  symbol: tokenSymbol,
+                  decimals: tokenDecimals,
+                  image: tokenImage,
+                  networkId: '137' // Specify the network ID for Polygon
+                },
+              },
+            });
+
+            if (wasAdded) {
+              console.log('Token added!');
+            } else {
+              console.log('Token not added.');
+            }
+          } catch (error) {
+            console.log('Error adding token:', error);
+          }
+        } else {
+          console.log('Web3 provider not available');
+        }
+      }
+
+      function confirmAddToken() {
+        const confirmed = window.confirm("Please confirm the transaction in your wallet");
+        if (confirmed) {
+          addToken();
+        }
+      }
+    </script>
+	<img src="logostyle.png" weight="250" height="auto" alt="Example Image">
+  </body>
+  </div>
+</html>
