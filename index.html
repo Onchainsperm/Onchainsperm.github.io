@@ -13,58 +13,62 @@ images.forEach(img => {
 
 </script>
 
-  <script>
-    function setCookie(cname, cvalue, exdays) {
-      var d = new Date();
-      d.setTime(d.getTime() + (exdays*24*60*60*1000));
-      var expires = "expires="+ d.toUTCString();
-      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-    }
+<script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
+<script type="text/javascript" charset="UTF-8">
+  function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
 
-    function getCookie(cname) {
-      var name = cname + "=";
-      var decodedCookie = decodeURIComponent(document.cookie);
-      var ca = decodedCookie.split(';');
-      for(var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-          c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-          return c.substring(name.length, c.length);
-        }
+  function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
       }
-      return "";
-    }
-
-    function acceptCookies() {
-      setCookie("cookieConsent", "accepted", 365);
-      hideBanner();
-    }
-
-    function declineCookies() {
-      setCookie("cookieConsent", "declined", 365);
-      hideBanner();
-    }
-
-    function hideBanner() {
-      var banner = document.getElementById("cookie-banner");
-      banner.style.display = "none";
-    }
-
-    function showBanner() {
-      var banner = document.getElementById("cookie-banner");
-      banner.style.display = "block";
-    }
-
-    window.onload = function() {
-      if (getCookie("cookieConsent") == "accepted") {
-        hideBanner();
-      } else {
-        showBanner();
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
       }
     }
-  </script>
+    return "";
+  }
+
+  function acceptCookies() {
+    setCookie("cookieConsent", "accepted", 365);
+    hideBanner();
+  }
+
+  function declineCookies() {
+    setCookie("cookieConsent", "declined", 365);
+    hideBanner();
+  }
+
+  function hideBanner() {
+    var banner = document.getElementById("cookie-banner");
+    banner.style.display = "none";
+  }
+
+  function showBanner() {
+    var banner = document.getElementById("cookie-banner");
+    banner.style.display = "block";
+  }
+
+  window.onload = function() {
+    if (getCookie("cookieConsent") == "accepted") {
+      hideBanner();
+    } else {
+      showBanner();
+    }
+  }
+</script>
+<script type="text/plain" data-cookie-consent="functionality">
+  <!-- put your banner HTML code here -->
+</script>
 
 
 
@@ -1044,77 +1048,6 @@ questions.forEach(function(question) {
 style="font-weight: bold; color: blue;">Click Here</p></a>
 </div>
 
-<!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
-<script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
-<script type="text/javascript" charset="UTF-8">
-document.addEventListener('DOMContentLoaded', function () {
-cookieconsent.run({"notice_banner_type":"headline","consent_type":"express","palette":"dark","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"ONCHAIN SPERM"});
-});
-</script>
-
-<!-- ONCHAIN SPERM -->
-  <script type="text/plain" data-cookie-consent="functionality">
-    function setCookie(cname, cvalue, exdays) {
-      var d = new Date();
-      d.setTime(d.getTime() + (exdays*24*60*60*1000));
-      var expires = "expires="+ d.toUTCString();
-      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-    }
-
-    function getCookie(cname) {
-      var name = cname + "=";
-      var decodedCookie = decodeURIComponent(document.cookie);
-      var ca = decodedCookie.split(';');
-      for(var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-          c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-          return c.substring(name.length, c.length);
-        }
-      }
-      return "";
-    }
-
-    function acceptCookies() {
-      setCookie("cookieConsent", "accepted", 365);
-      hideBanner();
-    }
-
-    function declineCookies() {
-      setCookie("cookieConsent", "declined", 365);
-      hideBanner();
-    }
-
-    function hideBanner() {
-      var banner = document.getElementById("cookie-banner");
-      banner.style.display = "none";
-    }
-
-    function showBanner() {
-      var banner = document.getElementById("cookie-banner");
-      banner.style.display = "block";
-    }
-
-    window.onload = function() {
-      if (getCookie("cookieConsent") == "accepted") {
-        hideBanner();
-      } else {
-        showBanner();
-      }
-    }
-  </script>
-<!-- end of ONCHAIN SPERM-->
-
-<noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/">TermsFeed</a></noscript>
-<!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
-
-
-
-
-
-<!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID parameter. Place it where appropriate, style it as needed. -->
 
 <a href="#" id="open_preferences_center">Update cookies preferences</a>
 
@@ -1140,6 +1073,9 @@ cookieconsent.run({"notice_banner_type":"headline","consent_type":"express","pal
    <p>
       <a href="./coockies policy">Coockies Policy</a>
    </p>
+</footer>
+<footer>
+   <p>&copy; 2023 ONCHAIN SPERM. All rights reserved.</p>
 </footer>
 
 
