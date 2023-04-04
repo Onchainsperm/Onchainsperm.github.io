@@ -2,6 +2,15 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  $(".banner__menu-icon").click(function() {
+    $(".banner__menu").toggle();
+  });
+});
+</script>
+
 <script>
 const images = document.querySelectorAll(".image-container img");
 
@@ -66,48 +75,96 @@ images.forEach(img => {
     }
   </script>
 
+</head>
+
 	<title>ONCHAIN SPERM</title>
 	<style>
+   body {
+  color: white;
+   }
+
 
 		body {
       font-family: Arial, sans-serif;
 			font-size: 16px;
+     background: linear-gradient(to bottom, #151922
+       , #151922
+        );
+			/
 			animation-name: background-color-animation;
 			animation-duration: 60s;
 			animation-timing-function: ease-in-out;
 			animation-iteration-count: infinite;
 		}
 		
-		@keyframes background-color-animation {
-			0% {
-				background-color: yellow;
-			}
-			50% {
-				background-color: orange;
-			}
-			100% {
-				background-color: yellow;
-			}
-		}
-		
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #3a005e
+;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+z-index: 999; /* set a high z-index value */
+}
+
+.banner__logo {
+  display: flex;
+  align-items: center;
+}
+
+.banner__logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.banner__name {
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+}
+.banner__menu-icon {
+  display: none; /* hide by default on larger screens */
+  cursor: pointer;
+  color: #fff;
+  font-size: 28px;
+  margin-left: auto; /* push to the right side */
+}
+
+.banner__menu {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background-color: #3a005e;
+  color: #fff;
+  width: 200px;
+  padding: 10px;
+  display: none; /* hide by default */
+}
+
+.banner__menu a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+
+
 .glow-img {
-  border: 2px solid #fff;
+  border: 2px solid #6C5DD3;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff8, 0 0 70px #ff8, 0 0 80px #ff8, 0 0 100px #ff8, 0 0 150px #ff8;
   animation: glow 1s ease-in-out infinite alternate;
 }
 
-@keyframes glow {
-  from {
-    box-shadow: 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee;
-  }
-  to {
-    box-shadow: 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020;
-  }
-}
 
-		
 .image-container {
   display: flex;
   justify-content: center;
@@ -124,7 +181,7 @@ images.forEach(img => {
   transform: scale(1.2);
 }
 .image-box {
-  border: 3px solid purple;
+  border: 3px solid #6C5DD3;
   padding: 10px;
 }
 
@@ -179,7 +236,7 @@ images.forEach(img => {
 
 		
 		.chart {
-			border: 2px solid black;
+			border: 2px solid #6C5DD3;
 			padding: 10px;
 			margin: 10px 0;
 		}
@@ -193,7 +250,7 @@ images.forEach(img => {
 		.chart table th,
 		.chart table td {
 			padding: 5px;
-			border: 2px solid black;
+			border: 2px solid #6C5DD3;
 		}
 		
 		.social {
@@ -224,7 +281,7 @@ images.forEach(img => {
 	<style>
 .glow-border {
   display: inline-block; /* ensure the border takes the width of the h2 text */
-  border: 2px solid #fff;
+  border: 2px solid purple;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff8, 0 0 70px #ff8, 0 0 80px #ff8, 0 0 100px #ff8, 0 0 150px #ff8;
@@ -238,7 +295,7 @@ images.forEach(img => {
 
 .glow-border {
   display: inline-block; /* ensure the border takes the width of the h3 text */
-  border: 2px solid #fff;
+  border: 2px solid pink;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff8, 0 0 70px #ff8, 0 0 80px #ff8, 0 0 100px #ff8, 0 0 150px #ff8;
@@ -281,7 +338,7 @@ images.forEach(img => {
   
 .question {
   margin-bottom: 10px;
-  border: 3px solid black;
+  border: 3px solid #6C5DD3;
   border-radius: 5px;
   padding: 10px;
   position: relative;
@@ -321,65 +378,30 @@ images.forEach(img => {
 
 <style>
   .glow-border {
-    border: 1px solid #fff;
+    border: 1px solid #6C5DD3;
     padding: 5px;
     border-radius: 10px;
-    box-shadow: 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #000000;
+    box-shadow: 0 0 50px #3a005e, 0 0 50px #000000, 0 0 50px #3a005e, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #3a005e, 0 0 50px #000000;
     animation: glow 3s ease-in-out infinite alternate;
   }
 
   @keyframes glow {
     from {
-      box-shadow: 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee;
+      box-shadow: 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e;
     }
     to {
-      box-shadow: 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020;
+      box-shadow: 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3;
     }
   }
-</style>
-
-</head>
-<body>
-  
-  
-<style>
   img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
     height: auto;
   }
-</style>
 
-
-<div style="text-align:center;">
-  <img src="mylogo.gif" width="300" height="300"class="glow-img">
-  <p>
-    
-  </p>
-<audio controls>
-  <source src="audio.mp3" type="audio/mpeg">
-</audio>
-  </div>
-  <p>
-    
-  </p>
-  <img src="holding.gif" width="300" height="300"class="glow-img">
-  <p>
-    
-  </p>
-
-</body>
-
-<div style="text-align:center;">
-<h2 class="glow-border">
-  <img src="spermologo.png" alt="Logo" class="logo">
-  ONCHAIN SPERM
-</h2>
-
-<style>
   .glow-border {
-    border: 2px solid #fff;
+    border: 2px solid #6C5DD3;
     border-radius: 5px;
     padding: 10px;
     text-align: center;
@@ -392,89 +414,14 @@ images.forEach(img => {
     right: -20px;
     z-index: 1;
   }
-</style>
 
-	<p>ONCHAIN SPERM is a collection of 777 unique,On-chain NFTs that are stored its Images and Metadata on the blockchain. Each sperm has its own unique characteristics, making it a one-of-a-kind collectible.</p>
-<p style="font-weight: bold; color: blue;">
-  An Innovative Way to Earn New Cryptocurrency and let NFT Holders to earn Passive income without Selling and staking their assets. </p>
-	
-	<h2 class="glow-border">Benefits for Holding SPERM NFT?</h2>
-	<p>This NFT is use to be a Ticket to access Giveaways, Airdrops and Private events.</p>
-<p>Aside from that this NFT will Reward its owner/holder with SPERMO TOKEN,
-	Just by holding on wallet.</p>
-<p>Its owner or holder will receive 0.01481 SPERMO TOKEN every 24hrs as long as he/she is holding this NFT.</p>
-<p>We have created a smart contract, that will mint SPERMO TOKEN and send it to the NFT owners,</p>
-<p>Which means every 24hrs all of the 777 ONCHAIN SPERM NFT will receive  0.01481 SPERMO TOKEN.</p>
-<p>Note that every single NFT will each receive equal Token, 
-	which means if you hold 2 NFTs then your daily Rewards is 2x instead of receiving 0.01481 you will receive
-	0.02962 SPERMO TOKEN.</p>
-<p>The more NFT you hold the more SPERMO TOKEN you will receive every 24hrs.</p>
-
-  <img src="name.gif" width="300" height="300"class="glow-img">
-
-<p class="glow-border" style="color: green;">Get Your Own ONCHAIN SPERM NFT and Start earning SPERMO Token!</p>
-
-</div>
-	<div style="text-align:center;">
-	<h2 class="glow-border">Start Receiving Airdrop Now!
-	</h2>
-	
-<div style="display: flex; justify-content: center;">
-  <a href="./add spermo token">
-    <button style="display: flex; align-items: center; font-size: 17px; padding: 5px 10px; height: 43px; border-radius: 3px;">
-      <span class="metamask-logo"></span>
-      Add to Metamask
-    </button>
-  </a>
-</div>
-	
-  <a href="./buyspermo"><button>Buy SPERMO TOKEN</button></a>
-<a href="https://opensea.io/collection/onchain-sperm"><button>Buy NFT on OpenSea</button></a>
-
-<style>
   /* This styles the button inside the <a> tag */
   a button {
-    background-color: blue;
-    border: 2px solid black;
-    color: white;
+    background-color: #2B6DEF;
+    border: 2px solid white;
+    color: purple;
   }
-</style>
 
-<a href="https://rarible.com/onchainsperm"><button>Buy NFT on Rarible</button></a>
-<p>
-  
-</p>
-	<p>You can buy ONCHAIN SPERM on the <a href="https://opensea.io/collection/onchain-sperm">OpenSea</a> and 
-	<a href="https://rarible.com/onchainsperm">Rarible</a> marketplace.
-	And you can buy SPERMO TOKEN <a href="./buyspermo">Here</a>.
-	Each sperm is sold as a separate NFT, so you can choose the one you like the most.</p>
-	
-  
-<div class="social-icon"
-	
-<div style="text-align:center;">
-    <h2></h2>
-    <button style="color:white; background-color:black; border:none; padding:10px 20px; border-radius:5px; font-size:16px; cursor:pointer;
-            animation: myanimation 15s infinite;">
-        SPERMO TOKEN
-    </button>
-<style>
-    @keyframes myanimation {
-        0% {
-            background-color: black;
-        }
-        50% {
-            background-color: #8B4513; /*brown*/
-        }
-        100% {
-            background-color: black;
-        }
-    }
-</style>
-</div>
-
-
-<style>
   .chart-container {
     text-align: center;
   }
@@ -498,7 +445,294 @@ images.forEach(img => {
       padding: 0;
     }
   }
+
+  .cool-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: brown;
+    border: 2px solid black;
+    color: yellow;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+.metamask-logo {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-image: url('metamask.png');
+    background-size: cover;
+  }
+   h4 {
+  font-size: 35px;
+}
+   h4 {
+  color: #6C5DD3;
+}
+  /* This styles the button inside the <a> tag */
+  a button {
+    background-color:#6C5DD3;
+    border: 2px solid #3a005e;
+    color: white;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-icons img {
+    height: 25px;
+    width: auto;
+    margin: 0 1px;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+  }
+
+  .button {
+    border: 2px solid #6C5DD3; /* add border to button */
+    padding: 5px; /* add padding to button */
+    border-radius: 5px; /* add border radius to button */
+    filter: brightness(100%);
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+  }
+
+  .button:hover {
+    filter: brightness(150%);
+    transform: scale(1.1);
+  }
+
+  .button:hover img {
+    filter: invert(100%) brightness(100%);
+  }
+ 
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .social-icons img {
+      height: 25px;
+      width: auto;
+      margin: 0 2px;
+    }
+    .social-icons a {
+      filter: brightness(100%);
+      transition: all 0.2s ease-in-out;
+    }
+    .social-icons a:hover {
+      filter: brightness(150%);
+      transform: scale(1.1);
+    }
+    .social-icons a:hover img {
+      filter: invert(100%) brightness(100%);
+    }
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .image-container img {
+      display: block;
+      width: 50%;
+      height: auto;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: opacity 0.5s;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .image-container:hover .overlay {
+      opacity: 1;
+    }
+
+    .overlay button {
+      display: block;
+      margin: auto;
+      padding: 10px 5px;
+      border: 2px solid white;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      background-color: transparent;
+      transition: all 0.5s;
+    }
+
+    .overlay button:hover {
+      background-color: white;
+      color: black;
+    }
+  
+
+
+
+.nft-container img {
+  max-width: 40%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.nft-container img:hover {
+  transform: scale(1.1);
+}
+
+#profile-img {
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+   }
+
+
+  
 </style>
+
+</head>
+<body>
+<div class="banner">
+  <div class="banner__logo">
+    <img src="spermologo.png" alt="Logo">
+    <h1 class="banner__name">ONCHAIN SPERM</h1>
+  </div>
+  <div class="banner__menu-icon">&#9776;</div>
+  <div class="banner__menu">
+    <a href="#">Menu item 1</a>
+    <a href="#">Menu item 2</a>
+    <a href="#">Menu item 3</a>
+  </div>
+</div>
+
+
+</body>
+<p>
+  
+</p>
+
+<p>
+  
+</p>
+<p>
+  
+</p>
+<p>
+  
+</p>
+
+<div class="content">
+<body>
+<h1> .  </h1>
+  <p>
+    
+  </p>
+  </div>
+  <p>
+    
+  </p>
+  <img src="holding.gif" width="300" height="300"class="glow-img">
+  <p>
+    
+  </p>
+
+
+<div style="text-align:center;">
+<h2 class="glow-border">
+  <img src="spermologo.png" alt="Logo" class="logo">
+  ONCHAIN SPERM
+</h2>
+<p style="font-weight: bold; color: #6C5DD3;">
+	ONCHAIN SPERM is a collection of 777 unique,On-chain NFTs that are stored its Images and Metadata on the blockchain. Each sperm has its own unique characteristics, making it a one-of-a-kind collectible.</p>
+<p style="font-weight: bold; color: #6C5DD3;">
+  An Innovative Way to Earn New Cryptocurrency and let NFT Holders to earn Passive income without Selling and staking their assets. </p>
+	
+	<h2 class="glow-border">Benefits for Holding SPERM NFT?</h2>
+<p style="font-weight: bold; color: #6C5DD3;">
+	This NFT is use to be a Ticket to access Giveaways, Airdrops and Private events.</p>
+<p style="font-weight: bold; color: #6C5DD3;">
+Aside from that this NFT will Reward its owner/holder with SPERMO TOKEN,
+	Just by holding on wallet.</p>
+<p style="font-weight: bold; color: #6C5DD3;">
+Its owner or holder will receive 0.01481 SPERMO TOKEN every 24hrs as long as they are holding this NFT.</p>
+<p style="font-weight: bold; color: #6C5DD3;">
+We have created a smart contract, that will mint SPERMO TOKEN and send it to the NFT owners,</p>
+<p style="font-weight: bold; color: #6C5DD3;">
+Which means every 24hrs all of the 777 ONCHAIN SPERM NFT will receive  0.01481 SPERMO TOKEN.</p>
+<p style="font-weight: bold; color: #6C5DD3;">
+Note that every single NFT will each receive equal Token, 
+	which means if you hold 2 NFTs then your daily Rewards is 2x instead of receiving 0.01481 you will receive
+	0.02962 SPERMO TOKEN.</p>
+<p style="font-weight: bold; color: #6C5DD3;">
+The more NFT you hold the more SPERMO TOKEN you will receive every 24hrs.</p>
+
+  <img src="image1.jpg" width="300" height="300"class="glow-img">
+
+<p class="glow-border" style="color: green;">Get Your Own ONCHAIN SPERM NFT and Start earning SPERMO Token!</p>
+
+</div>
+	<div style="text-align:center;">
+	<h2 class="glow-border">Start Receiving Airdrop Now!
+	</h2>
+	
+<div style="display: flex; justify-content: center;">
+  <a href="./add spermo token">
+    <button style="display: flex; align-items: center; font-size: 17px; padding: 5px 10px; height: 43px; border-radius: 3px;">
+      <span class="metamask-logo"></span>
+      Add to Metamask
+    </button>
+  </a>
+</div>
+	
+  <a href="./buyspermo"><button>Buy SPERMO TOKEN</button></a>
+<a href="https://opensea.io/collection/onchain-sperm"><button>Buy NFT on OpenSea</button></a>
+
+
+<a href="https://rarible.com/onchainsperm"><button>Buy NFT on Rarible</button></a>
+<p>
+  
+</p>
+<p style="font-weight: bold; color: #6C5DD3;">
+	You can buy ONCHAIN SPERM on the <a href="https://opensea.io/collection/onchain-sperm">OpenSea</a> and 
+	<a href="https://rarible.com/onchainsperm">Rarible</a> marketplace.
+	And you can buy SPERMO TOKEN <a href="./buyspermo">Here</a>.
+	Each sperm is sold as a separate NFT, so you can choose the one you like the most.</p>
+	
+  
+
+	
+<div style="text-align:center;">
+    <h2></h2>
+    <button style="color:white; background-color:black; border:none; padding:10px 20px; border-radius:5px; font-size:16px; cursor:pointer;
+            animation: myanimation 15s infinite;">
+        SPERMO TOKEN
+    </button>
+<style>
+    @keyframes myanimation {
+        0% {
+            background-color: black;
+        }
+        50% {
+            background-color: #8B4513; /*brown*/
+        }
+        100% {
+            background-color: black;
+        }
+    }
+</style>
+</div>
 
   <img src="holding.gif" width="300" height="300"class="glow-img">
 
@@ -584,44 +818,6 @@ images.forEach(img => {
   </div>
 </div>
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-  </head>
-<style>
-  .cool-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: brown;
-    border: 2px solid black;
-    color: yellow;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-.metamask-logo {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    background-image: url('metamask.png');
-    background-size: cover;
-  }
-   h4 {
-  font-size: 35px;
-}
-   h4 {
-  color: purple;
-}
-
-</style>
-
-<body>
   <p>
     
   </p>
@@ -652,7 +848,7 @@ images.forEach(img => {
   <p>
     
   </p>
-<body>
+
   <p>
     
   </p>
@@ -725,8 +921,9 @@ Second, holding SPERMO TOKEN may also yield MATIC Tokens in the future developme
   <h3>Does SPERMO TOKEN have a Presale?</h3>
   <div class="answer">
     <p>No! SPERMO TOKEN has a max supply of 21,000 and there is no pre-mined token.</p>
-    <p>Its Supply will come from all of the NFT holders and grows over time.</p>
-    <p>Even the creator cannot mint a new  token for there self, since the launching of SPERMO TOKEN is FAIR. It requires the creator to hold its own NFT in-order to get its own token.</p>
+    <p>But we will will provide liquidity for people to start trading our SPERMO TOKEN and you can still get SPERMO TOKEN just by holding NFT on your wallet.
+    Its Supply will come from all of the NFT holders and grows over time.</p>
+    <p>Even We the creator cannot mint a new  token for our self, since the launching of SPERMO TOKEN is FAIR. It requires the creator to hold its own NFT in-order to get its own token.</p>
   </div>
 </div>
 
@@ -743,7 +940,7 @@ questions.forEach(function(question) {
 
 
 </script>
-<body>
+
   <p>
     
   </p>
@@ -768,21 +965,9 @@ questions.forEach(function(question) {
 	</h2>
 <a href="https://opensea.io/collection/onchain-sperm"><button>Buy Now on OpenSea</button></a>
 
-<style>
-  /* This styles the button inside the <a> tag */
-  a button {
-    background-color: blue;
-    border: 2px solid black;
-    color: white;
-  }
-</style>
-
 <a href="https://rarible.com/onchainsperm"><button>Buy Now on Rarible</button></a>
 </div>
   
- 
-</body>
-</body>
 
   <p>
     
@@ -802,8 +987,8 @@ questions.forEach(function(question) {
     
   </p>
 	<footer>
-	<div style="text-align:center;">
-  <img src="profile.jpg" width="300" height="auto"class="glow-border">
+<div style="text-align:center;">
+  <img id="profile-img" src="creatorlogo.jpg" width="150" height="auto">
 <div style="display: flex; justify-content: center;">
   <a href="https://twitter.com/criptotradeir">
     <img src="twitter.png" alt="Twitter logo" width="32" height="32">
@@ -833,38 +1018,16 @@ questions.forEach(function(question) {
     
   </p>
   <img src="hold.gif" width="300" height="300"class="glow-img">
-</body>
 
-</html>
-<body>
+
+
+
 <div class="social">
 	<div style="text-align:center;">
   <h2>YOU CAN FIND US ON:</h2>
 </div>
 <div style="text-align:center;">
-  <style>
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .social-icons img {
-      height: 5px;
-      width: auto;
-      margin: 0 2px;
-    }
-    .social-icons a {
-      filter: brightness(100%);
-      transition: all 0.2s ease-in-out;
-    }
-    .social-icons a:hover {
-      filter: brightness(150%);
-      transform: scale(1.1);
-    }
-    .social-icons a:hover img {
-      filter: invert(100%) brightness(100%);
-    }
-  </style>
+
 <div class="social-icons">
   <a href="https://www.facebook.com/profile.php?id=100091389517044" target="_blank">
     <div class="button">
@@ -897,109 +1060,15 @@ questions.forEach(function(question) {
     </div>
   </a>
 </div>
-
-<style>
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .social-icons img {
-    height: 25px;
-    width: auto;
-    margin: 0 1px;
-  }
-
-  .social-icons a {
-    text-decoration: none;
-  }
-
-  .button {
-    border: 2px solid blue; /* add border to button */
-    padding: 5px; /* add padding to button */
-    border-radius: 5px; /* add border radius to button */
-    filter: brightness(100%);
-    transition: all 0.2s ease-in-out;
-    overflow: hidden;
-  }
-
-  .button:hover {
-    filter: brightness(150%);
-    transform: scale(1.1);
-  }
-
-  .button:hover img {
-    filter: invert(100%) brightness(100%);
-  }
-</style>
 </div>
+</div>
+
 
 	<div style="text-align:center;">
 	<h2 >LAUNCHED ON:
 	</h2>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Image Hover Effect</title>
-  <style>
-    .image-container {
-      position: relative;
-      display: inline-block;
-    }
 
-    .image-container img {
-      display: block;
-      width: 50%;
-      height: auto;
-    }
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      opacity: 0;
-      transition: opacity 0.5s;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .image-container:hover .overlay {
-      opacity: 1;
-    }
-
-    .overlay button {
-      display: block;
-      margin: auto;
-      padding: 10px 5px;
-      border: 2px solid white;
-      border-radius: 5px;
-      color: white;
-      font-weight: bold;
-      background-color: transparent;
-      transition: all 0.5s;
-    }
-
-    .overlay button:hover {
-      background-color: white;
-      color: black;
-    }
-  </style>
-</head>
-
-<style>
-.nft-container img {
-  max-width: 40%;
-  transition: transform 0.2s ease-in-out;
-}
-
-.nft-container img:hover {
-  transform: scale(1.1);
-}
-
-</style>
-
+ 
 <div class="nft-container">
         <a href="https://www.polygon.technology/">
     <img src="polygon.png" alt="your image description" class="glow-border">
@@ -1030,12 +1099,12 @@ questions.forEach(function(question) {
 
 
 </div>
-</html>
+
 <p>
   
 </p>
 	<div style="text-align:center;">
-<p style="font-weight: bold; color: black;">
+<p style="font-weight: bold; color: pink;">
   Get Support</p>
 
 <a href="https://onchainsperm.github.io/support.html"><p
@@ -1143,7 +1212,7 @@ cookieconsent.run({"notice_banner_type":"headline","consent_type":"express","pal
    <p>&copy; 2023 ONCHAIN SPERM. All rights reserved.</p>
 </footer>
 
-
-
+</div>
 </body>
+</div>
 </html>
