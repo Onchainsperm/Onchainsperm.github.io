@@ -92,6 +92,23 @@ images.forEach(img => {
 			}
 		}
 		
+.glow-img {
+  border: 2px solid #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff8, 0 0 70px #ff8, 0 0 80px #ff8, 0 0 100px #ff8, 0 0 150px #ff8;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee;
+  }
+  to {
+    box-shadow: 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020;
+  }
+}
+
 		
 .image-container {
   display: flex;
@@ -120,7 +137,7 @@ images.forEach(img => {
 }
 
 .image-grid img {
-  width: 100%;
+  width: 80%;
   height: auto;
   transition: transform 0.3s ease-in-out; /* add transition effect */
 }
@@ -128,6 +145,8 @@ images.forEach(img => {
 .image-grid img:hover {
   transform: scale(1.2); /* zoom effect on hover */
 }
+
+
 
 		button {
 			background-color: #4CAF50;
@@ -204,15 +223,53 @@ images.forEach(img => {
 			font-size: 24px;
 		}
 	</style>
-<style>
-  .glow-border {
-    position: relative;
-    border: 2px solid #fff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff8, 0 0 70px #ff8, 0 0 80px #ff8, 0 0 100px #ff8, 0 0 150px #ff8;
-    animation: glow 1s ease-in-out infinite alternate;
+	<style>
+.glow-border {
+  display: inline-block; /* ensure the border takes the width of the h2 text */
+  border: 2px solid #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff8, 0 0 70px #ff8, 0 0 80px #ff8, 0 0 100px #ff8, 0 0 150px #ff8;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.glow-border h2 {
+  margin: 0; /* remove default margin of h2 */
+}
+
+
+.glow-border {
+  display: inline-block; /* ensure the border takes the width of the h3 text */
+  border: 2px solid #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff8, 0 0 70px #ff8, 0 0 80px #ff8, 0 0 100px #ff8, 0 0 150px #ff8;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.glow-border h3 {
+  margin: 0; /* remove default margin of h3 */
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee;
   }
+  to {
+    box-shadow: 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020;
+  }
+}
+
+
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee;
+  }
+  to {
+    box-shadow: 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020;
+  }
+}
 
   .logo {
     position: absolute;
@@ -298,7 +355,7 @@ images.forEach(img => {
 
 
 <div style="text-align:center;">
-  <img src="mylogo.gif" width="300" height="300"class="glow-border">
+  <img src="mylogo.gif" width="300" height="300"class="glow-img">
   <p>
     
   </p>
@@ -309,7 +366,7 @@ images.forEach(img => {
   <p>
     
   </p>
-  <img src="holding.gif" width="300" height="300"class="glow-border">
+  <img src="holding.gif" width="300" height="300"class="glow-img">
   <p>
     
   </p>
@@ -321,6 +378,24 @@ images.forEach(img => {
   <img src="spermologo.png" alt="Logo" class="logo">
   ONCHAIN SPERM
 </h2>
+
+<style>
+  .glow-border {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+  }
+
+  .logo {
+    position: absolute;
+    top: -25px;
+    right: -20px;
+    z-index: 1;
+  }
+</style>
+
 	<p>ONCHAIN SPERM is a collection of 777 unique,On-chain NFTs that are stored its Images and Metadata on the blockchain. Each sperm has its own unique characteristics, making it a one-of-a-kind collectible.</p>
 <p style="font-weight: bold; color: blue;">
   An Innovative Way to Earn New Cryptocurrency and let NFT Holders to earn Passive income without Selling and staking their assets. </p>
@@ -336,10 +411,11 @@ images.forEach(img => {
 	which means if you hold 2 NFTs then your daily Rewards is 2x instead of receiving 0.01481 you will receive
 	0.02962 SPERMO TOKEN.</p>
 <p>The more NFT you hold the more SPERMO TOKEN you will receive every 24hrs.</p>
-<h2 class="glow-border">They have a Name!</h2>
-  <img src="name.gif" width="300" height="300"class="glow-border">
 
-	<p class="glow-border">Get Your Own ONCHAIN SPERM NFT and Start earning SPERMO Token!</p>
+  <img src="name.gif" width="300" height="300"class="glow-img">
+
+<p class="glow-border" style="color: green;">Get Your Own ONCHAIN SPERM NFT and Start earning SPERMO Token!</p>
+
 </div>
 	<div style="text-align:center;">
 	<h2 class="glow-border">Start Receiving Airdrop Now!
@@ -426,7 +502,7 @@ images.forEach(img => {
   }
 </style>
 
-  <img src="holding.gif" width="300" height="300"class="glow-border">
+  <img src="holding.gif" width="300" height="300"class="glow-img">
 
 <div class="chart-container">
   <div class="row">
@@ -588,7 +664,6 @@ images.forEach(img => {
       
     </p>
 
-  <h4>Frequently Ask Questions:</h4>
 <p style="font-weight: bold;">
   ___________FAQS___________
   </p>
@@ -759,7 +834,7 @@ questions.forEach(function(question) {
   <p>
     
   </p>
-  <img src="hold.gif" width="300" height="300"class="glow-border">
+  <img src="hold.gif" width="300" height="300"class="glow-img">
 </body>
 
 </html>
@@ -863,7 +938,7 @@ questions.forEach(function(question) {
 </div>
 
 	<div style="text-align:center;">
-	<h2 class="glow-border">Launched on:
+	<h2 >LAUNCHED ON:
 	</h2>
 <!DOCTYPE html>
 <html>
@@ -963,7 +1038,7 @@ questions.forEach(function(question) {
 </p>
 	<div style="text-align:center;">
 <p style="font-weight: bold; color: black;">
-  Support:onchainsperm.github@gmail.com</p>
+  Get Support</p>
 
 <a href="https://onchainsperm.github.io/support.html"><p
 style="font-weight: bold; color: blue;">Click Here</p></a>
