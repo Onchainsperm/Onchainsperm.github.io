@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONCHAIN SPERM</title>
+    <link rel="stylesheet" href="style.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(document).ready(function() {
-  $(".banner__menu-icon").click(function() {
-    $(".banner__menu").toggle();
-  });
-});
-</script>
+
 
 <script>
 const images = document.querySelectorAll(".image-container img");
@@ -75,18 +72,24 @@ images.forEach(img => {
     }
   </script>
 
-</head>
-
-	<title>ONCHAIN SPERM</title>
-	<style>
-   body {
+    
+    
+<style>
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+h2 {
+  vertical-align: center;
+  text-align: center;
+}
+body {
   color: white;
    }
-
-
+html, body {
+  margin: 0;
+  height: 100%;
+}
 		body {
       font-family: Arial, sans-serif;
-			font-size: 16px;
+			font-size: 15px;
      background: linear-gradient(to bottom, #151922
        , #151922
         );
@@ -97,65 +100,150 @@ images.forEach(img => {
 			animation-iteration-count: infinite;
 		}
 		
-.banner {
+
+* {
+  font-family: "";
+  box-sizing: border-box;
+}
+
+.top-nav {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 80px;
-  background-color: #3a005e
-;
+  right: 0;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-  padding: 0 20px;
+  justify-content: space-between;
+  background-color: #151922;
+  background: linear-gradient(to left, #151922, #6C5DD3);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #FFF;
+  height: 50px;
+  padding: 1em;
 z-index: 999; /* set a high z-index value */
 }
-
-.banner__logo {
+.logo-container img {
+  width: 45px;
+  height: 45px;
+}
+.logo-container {
   display: flex;
   align-items: center;
 }
 
-.banner__logo img {
-  height: 40px;
-  margin-right: 10px;
+.logo-container h2 {
+  margin-left: 10px;
+  font-size: 20px;
 }
 
-.banner__name {
-  font-size: 24px;
-  color: #fff;
-  font-weight: bold;
+
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-.banner__menu-icon {
-  display: none; /* hide by default on larger screens */
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
   cursor: pointer;
-  color: #fff;
-  font-size: 28px;
-  margin-left: auto; /* push to the right side */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.banner__menu {
-  position: absolute;
-  top: 80px;
-  right: 0;
-  background-color: #3a005e;
-  color: #fff;
-  width: 200px;
-  padding: 10px;
-  display: none; /* hide by default */
+#menu-toggle {
+  display: none;
 }
 
-.banner__menu a {
+.menu-button,
+.menu-button::before,
+.menu-button::after {
   display: block;
-  color: #fff;
-  text-decoration: none;
-  margin: 5px 0;
-  font-size: 16px;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
 }
 
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
 
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
 
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+a {
+    color: white;
+  }
 .glow-img {
   border: 2px solid #6C5DD3;
   padding: 10px;
@@ -370,13 +458,6 @@ z-index: 999; /* set a high z-index value */
   border-width: 6px 0 6px 6px;
   border-color: transparent transparent transparent #666;
 }
-
-  
-</style>
-
-
-
-<style>
   .glow-border {
     border: 1px solid #6C5DD3;
     padding: 5px;
@@ -598,43 +679,66 @@ z-index: 999; /* set a high z-index value */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
    }
 
+.partners {
+    display: inline-block;
+    position: relative;
+    margin: -10px;
+}
 
-  
+.partners a {
+    display: block;
+}
+
+.partners img {
+    width: 150px;
+    height: auto;
+}
+
+.partners .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.partners:hover .overlay {
+    opacity: 1;
+}
+
+
+
+
+
+
 </style>
 
 </head>
 <body>
-<div class="banner">
-  <div class="banner__logo">
-    <img src="spermologo.png" alt="Logo">
-    <h1 class="banner__name">ONCHAIN SPERM</h1>
+<section class="top-nav">
+  <div>
+    <div class="logo-container">
+      <img src="spermologo.png" alt="Your Logo">
+      <h2>ONCHAIN SPERM</h2>
+    </div>
   </div>
-  <div class="banner__menu-icon">&#9776;</div>
-  <div class="banner__menu">
-    <a href="#">Menu item 1</a>
-    <a href="#">Menu item 2</a>
-    <a href="#">Menu item 3</a>
-  </div>
-</div>
+  <input id="menu-toggle" type="checkbox" />
+  <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+  </label>
+  <ul class="menu">
+    <li><a href="./roadmap" onclick="myFunction()">Roadmap</a></li>
+    <li><a href="./whitepaper" onclick="myFunction()">Whitepaper</a></li>
+    <li><a href="./spermotokendocs" onclick="myFunction()">SPERMO TOKEN Docs</a></li>
+    <li><a href="./earnspermotoken" onclick="myFunction()">How to Start?</a></li>
+    <li><a href="./support" onclick="myFunction()">Support</a></li>
+    <li><a href="./about" onclick="myFunction()">About</a></li>
+  </ul>
+</section>
 
-
-</body>
-<p>
-  
-</p>
-
-<p>
-  
-</p>
-<p>
-  
-</p>
-<p>
-  
-</p>
-
-<div class="content">
-<body>
 <h1> .  </h1>
   <p>
     
@@ -926,21 +1030,6 @@ Second, holding SPERMO TOKEN may also yield MATIC Tokens in the future developme
     <p>Even We the creator cannot mint a new  token for our self, since the launching of SPERMO TOKEN is FAIR. It requires the creator to hold its own NFT in-order to get its own token.</p>
   </div>
 </div>
-
-<script>
-const questions = document.querySelectorAll('.question');
-
-questions.forEach(function(question) {
-  const questionHeader = question.querySelector('h3');
-  questionHeader.addEventListener('click', function() {
-    console.log('Question clicked!');
-    question.classList.toggle('open');
-  });
-});
-
-
-</script>
-
   <p>
     
   </p>
@@ -968,7 +1057,6 @@ questions.forEach(function(question) {
 <a href="https://rarible.com/onchainsperm"><button>Buy Now on Rarible</button></a>
 </div>
   
-
   <p>
     
   </p>
@@ -1018,10 +1106,6 @@ questions.forEach(function(question) {
     
   </p>
   <img src="hold.gif" width="300" height="300"class="glow-img">
-
-
-
-
 <div class="social">
 	<div style="text-align:center;">
   <h2>YOU CAN FIND US ON:</h2>
@@ -1067,39 +1151,33 @@ questions.forEach(function(question) {
 	<div style="text-align:center;">
 	<h2 >LAUNCHED ON:
 	</h2>
-
- 
-<div class="nft-container">
-        <a href="https://www.polygon.technology/">
-    <img src="polygon.png" alt="your image description" class="glow-border">
-    <div class="overlay">
-        </a>
-    </div>
+<div class="partners">
+    <a href="https://www.polygon.technology/">
+        <img src="polygon.png" alt="your image description" class="glow-border">
+        <div class="overlay">
+        </div>
+    </a>
 </div>
 <p>
   
 </p>
-<div class="nft-container">
-        <a href="https://www.opensea.io/">
-    <img src="opensea.jpg" alt="your image description" class="glow-border">
-    <div class="overlay">
-        </a>
-    </div>
+<div class="partners">
+    <a href="https://www.opensea.io/">
+        <img src="opensea.jpg" alt="your image description" class="glow-border">
+        <div class="overlay">
+        </div>
+    </a>
 </div>
 <p>
   
 </p>
-<div class="nft-container">
-        <a href="https://www.rarible.com/">
-    <img src="rarible.jpg" alt="your image description" class="glow-border">
-    <div class="overlay">
-        </a>
-    </div>
+<div class="partners">
+    <a href="https://www.rarible.com/">
+        <img src="rarible.jpg" alt="your image description" class="glow-border">
+        <div class="overlay">
+        </div>
+    </a>
 </div>
-
-
-</div>
-
 <p>
   
 </p>
@@ -1213,6 +1291,27 @@ cookieconsent.run({"notice_banner_type":"headline","consent_type":"express","pal
 </footer>
 
 </div>
+
+
+
+<script>
+const questions = document.querySelectorAll('.question');
+
+questions.forEach(function(question) {
+  const questionHeader = question.querySelector('h3');
+  questionHeader.addEventListener('click', function() {
+    console.log('Question clicked!');
+    question.classList.toggle('open');
+  });
+});
+
+
+</script>
+
+<script>
+function myFunction() {
+  // do something when the link is clicked
+}
+</script>
 </body>
-</div>
 </html>
