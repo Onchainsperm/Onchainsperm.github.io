@@ -159,9 +159,18 @@ td {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 20px; /* adjust the size as needed */
+  font-size: 25px; /* adjust the size as needed */
 }
-
+#whitepaper-box .arrrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  transform: rotate(-20deg);
+  margin-right: 10px;
+  padding: 10px;
+  font-size: 25px; /* adjust the size as needed */
+}
 	
 </style>
 
@@ -181,10 +190,7 @@ td {
 <p>
   
 </p>
-<div class="box" onclick="handleClick('./tokenomics')">
-  <span class="arrow">&#8599;</span>
-  <p><a href="#" style="font-weight: bold; text-decoration: none; color: black;">TOKENOMICS TABLE</a></p>
-</div>
+
 <p>
   
 </p>
@@ -245,6 +251,13 @@ Overall, SPERMO TOKEN offers a compelling investment opportunity for new investo
 <p>
   
 </p>
+<section>
+<div class="box" id="whitepaper-box" onclick="handleClick('./tokenomics')">
+  <span class="arrrow">&#8598;</span>
+  <p><a href="#" style="font-weight: bold; text-decoration: none; color: black;">TOKENOMICS TABLE</a></p>
+</div>
+
+</section>
 <div class="box" onclick="handleClick('./earnspermotoken')">
   <span class="arrow">&#8599;</span>
   <p><a href="#" style="font-weight: bold; text-decoration: none; color: black;">HOW TO START EARNING SPERMO TOKEN?</a></p>
