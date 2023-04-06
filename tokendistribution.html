@@ -159,7 +159,17 @@ td {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 20px; /* adjust the size as needed */
+  font-size: 25px; /* adjust the size as needed */
+}
+#whitepaper-box .arrrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  transform: rotate(-20deg);
+  margin-right: 10px;
+  padding: 10px;
+  font-size: 25px; /* adjust the size as needed */
 }
 
 	
@@ -181,10 +191,7 @@ td {
 <p>
   
 </p>
-<div class="box" onclick="handleClick('./tokenpurpose')">
-  <span class="arrow">&#8599;</span>
-  <p><a href="#" style="font-weight: bold; text-decoration: none; color: black;">TOKEN PURPOSE</a></p>
-</div>
+
 <p>
   
 </p>
@@ -246,7 +253,13 @@ This distribution process is efficient and secure, as the Airdrop smart contract
 <p>
 In summary, the script will call the Airdrop smart contract to initiate the distribution process. The Airdrop smart contract will verify the addresses of the NFT holders and then call the Token smart contract to mint the tokens. The minted tokens will then be sent directly to the wallets of the NFT holders.</p>
 
+<section>
+<div class="box" id="whitepaper-box" onclick="handleClick('./tokenpurpose')">
+  <span class="arrrow">&#8598;</span>
+  <p><a href="#" style="font-weight: bold; text-decoration: none; color: black;">TOKEN PURPOSE</a></p>
+</div>
 
+</section>
 
 <div class="box" onclick="handleClick('./tokenomics')">
   <span class="arrow">&#8599;</span>
