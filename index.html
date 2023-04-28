@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
     <title>ONCHAINSPERM</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 
 <script>
 const images = document.querySelectorAll(".image-container img");
@@ -73,40 +73,705 @@ images.forEach(img => {
   </script>
 
     
-    
-<style>
-@import url(https://fonts.googleapis.com/css?family=Raleway);
-h2 {
-  vertical-align: center;
-  text-align: center;
-}
+    <style>
+      
 body {
-  color: white;
-   }
-html, body {
- 
+  margin: 0;
+  background-color: #252954;
+}
+
+.hidden {
+  display: none;
+}
+
+.landingpage {
+  margin: 0 auto;
+  padding: 0 80px;
+  position: relative;
+  max-width: 1100px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #1F1D2B;
+}
+.landingpage::before {
+  content: "";
+  position: absolute;
+  width: 123px;
+  height: 123px;
+  left: 60%;
+  top: 138px;
+  filter: blur(90px);
+  background-color: #FB37FF;
+}
+.landingpage::after {
+  content: "";
+  position: absolute;
+  width: 123px;
+  height: 123px;
+  left: 80%;
+  top: 550px;
+  background-color: #18B2DE;
+  filter: blur(80px);
+}
+.landingpage .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  width: 100%;
+}
+.landingpage .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+.landingpage .auction {
+  margin-top: 100px;
+}
+.landingpage .discover {
+  display: flex;
+  flex-direction: column;
+}
+.landingpage .footer {
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.landingpage .footer2 {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  border-top: 1px solid #F2F2F2;
+}
+
+.navbar .hamburgerlogowrap {
+  display: flex;
+  align-items: center;
+}
+.navbar .hamburger {
+  display: none;
+  color: #D7D7D7;
+  background-color: #1F1D2B;
+  border: none;
+  margin-right: 10px;
+}
+.navbar .createbtn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  width: 126px;
+  height: 45px;
+  color: #BCBCBC;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+}
+.navbar .createbtn.selectedbtn {
+  border: 1px solid #D7D7D7;
+  border-radius: 10px;
+}
+.navbar .navlogo {
   height: 100%;
+  background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
 }
-		body {
-		  margin:30px;
-      font-family: Arial, sans-serif;
-			font-size: 14px;
-     background: linear-gradient(to bottom, #151922
-       , #151922
-        );
-			/
-			animation-name: background-color-animation;
-			animation-duration: 60s;
-			animation-timing-function: ease-in-out;
-			animation-iteration-count: infinite;
-		}
-		
-
-* {
-
-  box-sizing: border-box;
+.navbar .navlink {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #BCBCBC;
+}
+.navbar .navlink.selectedlink {
+  background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 1.5px solid #9B51E0;
+}
+.navbar .navlink:not(:last-child) {
+  margin-right: 32px;
 }
 
+.box .infobox {
+  animation-name: leftslide;
+  animation-duration: 0.8s;
+  max-height: 500px;
+  max-width: 55%;
+  overflow: hidden;
+}
+.box .infobox-boldtext {
+  margin: 0;
+  font-family: Poppins;
+  color: #FFFFFF;
+  font-size: 65px;
+  font-weight: 600;
+  line-height: 60px;
+  letter-spacing: -2px;
+  text-align: left;
+}
+.box .infobox-slimtext {
+  margin: 24px 0;
+  font-family: Poppins;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+.box .infobox-btnwrapper {
+  display: flex;
+}
+.box .infobox-explorebtn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1F1D2B;
+  padding: 8px 38px;
+  border-radius: 16px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: -1px;
+  color: #FFFFFF;
+}
+.box .infobox-createbtn {
+  cursor: pointer;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 8px 38px;
+  border: 1px solid #D7D7D7;
+  border-radius: 16px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: -1px;
+  color: #FFFFFF;
+}
+.box .infobox .selected {
+  border: none;
+  background: linear-gradient(103.91deg, #9B51E0 21.01%, rgba(48, 129, 237, 0.8) 100%);
+}
+.box .display {
+  animation-name: rightslide;
+  animation-duration: 0.8s;
+  padding: 14px;
+  border: 1px solid;
+  background: linear-gradient(169.44deg, rgba(58, 129, 191, 0.08) 1.85%, rgba(65, 48, 90, 0.08) 98.72%);
+  border-radius: 35px;
+  max-height: 450px;
+  max-width: 50%;
+  overflow: hidden;
+}
+.box .display-nft {
+  object-fit: cover;
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+.box .display .infowrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.box .display .info {
+  display: flex;
+  align-items: center;
+  font-family: "Poppins";
+  font-style: normal;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 12px;
+}
+.box .display .info p {
+  margin: 0;
+}
+.box .display .info-img {
+  object-fit: cover;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.box .display .info2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: "Poppins";
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+}
+.box .display .info2 p {
+  margin: 0;
+}
+.box .display .info2 .iconwrapper {
+  display: flex;
+  align-items: center;
+}
+.box .display .info2 .iconwrapper svg {
+  margin-right: 5px;
+}
+
+.auction .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+.auction .title .titlebold {
+  margin: 0;
+  font-family: "Poppins";
+  font-style: normal;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 72px;
+}
+.auction .title .titleslim {
+  margin: 0;
+  font-family: "Poppins";
+  font-style: normal;
+  color: #D7D7D7;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: -1px;
+}
+.auction .nft {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  justify-content: space-between;
+}
+
+.started {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.started-boldtext {
+  margin: 0;
+  align-self: center;
+  font-family: "Poppins";
+  font-style: normal;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 72px;
+}
+.started-slimtext {
+  margin: 0;
+  align-self: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: 0.5px;
+  color: #E2E2E2;
+}
+.started-items {
+  padding: 60px 80px;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-content: space-between;
+}
+.started-items:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  top: 80px;
+  filter: blur(80px);
+  background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
+}
+.started-items .itemwrapper p {
+  width: 100px;
+  margin: 0;
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #FFFFFF;
+}
+.started-items-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 18px;
+  background-color: red;
+  background: rgba(255, 255, 255, 0.095);
+  box-shadow: inset 2.01px -2.01px 20px rgba(214, 214, 214, 0.17), inset -3.01333px 3.01333px 3.01333px rgba(255, 255, 255, 0.39);
+  backdrop-filter: blur(74.4293px);
+}
+
+.discover-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.discover-title p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  letter-spacing: -1px;
+  color: #FFFFFF;
+}
+.discover-items {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  justify-content: space-between;
+}
+.discover-loadbtn {
+  cursor: pointer;
+  margin-top: 20px;
+  align-self: center;
+  width: 161px;
+  height: 40px;
+  border: 1px solid #D7D7D7;
+  border-radius: 10px;
+  background-color: transparent;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #BCBCBC;
+}
+
+.footer-main {
+  max-width: 40%;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  color: #FFFFFF;
+}
+.footer-navigate {
+  display: flex;
+}
+.footer-navigate .nav {
+  margin-left: 60px;
+}
+.footer-navigate .nav h5 {
+  margin: 0;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+.footer-navigate .nav p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.03em;
+  color: #D7D7D7;
+}
+
+.footer2 p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 36px;
+  color: #828282;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+.item-img {
+  object-fit: cover;
+  flex-shrink: 0;
+  width: 200px;
+  height: 220px;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.item-img:hover {
+  transform: scale(1.05);
+}
+.item-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.item-date {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  color: #BCBCBC;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+}
+.filters .filter {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #FFFFFF;
+}
+.filters .filter svg {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.filters .filterbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 30px;
+  background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
+  border: none;
+  border-radius: 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #FFFFFF;
+}
+.filters .filterbtn svg {
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 1500px) {
+  .landingpage {
+    max-width: 1200px;
+  }
+}
+@media screen and (max-width: 1040px) {
+  .box {
+    flex-direction: column;
+  }
+  .box .infobox {
+    max-height: 450px;
+    max-width: none;
+    margin-bottom: 50px;
+  }
+  .box .display {
+    display: none;
+    max-height: none;
+    max-width: none;
+  }
+
+  .auction .nft {
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+  }
+
+  .discover-items {
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+  .footer-main {
+    max-width: 80%;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .footer-navigate .nav:first-child {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 925px) {
+  .navlinkwrap {
+    display: none;
+  }
+
+  .buttonwrap {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex !important;
+    align-items: center;
+  }
+
+  .started-slimtext {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 825px) {
+  .started-items {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    padding: 50px 0;
+  }
+  .started-items:before {
+    height: 200px;
+    top: 90px;
+    filter: blur(120px);
+  }
+
+  .discover-items {
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 700px) {
+  .box {
+    flex-direction: column;
+  }
+  .box .infobox {
+    max-height: none;
+    max-width: none;
+    margin-bottom: 50px;
+  }
+  .box .display {
+    display: block;
+    max-height: none;
+    max-width: none;
+  }
+
+  .discover-title {
+    justify-content: center;
+  }
+  .discover-title .filters {
+    display: none;
+  }
+
+  .auction .title {
+    justify-content: center;
+  }
+  .auction .title .titleslim {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .landingpage {
+    padding: 0 20px;
+  }
+
+  .box .infobox-boldtext {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  .box .infobox-slimtext {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .discover-items {
+    grid-template-columns: auto;
+    justify-content: space-around;
+  }
+
+  .auction .nft {
+    grid-template-columns: auto;
+    justify-content: space-around;
+  }
+
+  .footer-main {
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 100%;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .footer-navigate {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .footer-navigate .nav {
+    margin-left: 20px;
+  }
+  .footer-navigate .nav h5 {
+    font-size: 15px;
+    line-height: 30px;
+  }
+  .footer-navigate .nav p {
+    font-size: 10px;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .landingpage .box .infobox-boldtext {
+    font-size: 32px;
+    line-height: 1.4em;
+    text-align: center;
+  }
+  .landingpage .box .infobox-slimtext {
+    text-align: center;
+  }
+  .landingpage .box .infobox-btnwrapper {
+    justify-content: center;
+  }
+}
+@keyframes leftslide {
+  from {
+    transform: translateX(-700px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes rightslide {
+  from {
+    transform: translateX(550px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+      
 .top-nav {
   position: fixed;
   top: 0;
@@ -242,75 +907,39 @@ z-index: 999; /* set a high z-index value */
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;
   }
-a {
-    color: white;
+}
+.metamask-logo {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-image: url('metamask.png');
+    background-size: cover;
   }
-.glow-img {
-  border: 2px solid #6C5DD3;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff8, 0 0 70px #ff8, 0 0 80px #ff8, 0 0 100px #ff8, 0 0 150px #ff8;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-
-.image-container {
-  display: flex;
-  justify-content: center;
-}
-
-.image-container img {
-  width: 30px;
-  height: 30px;
-  margin: 30px;
-  transition: transform 0.2s;
-}
-
-.image-container img:hover {
-  transform: scale(1.2);
-}
-.image-box {
-  border: 3px solid #6C5DD3;
-  padding: 10px;
-}
-
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
-.image-grid img {
-  width: 80%;
-  height: auto;
-  transition: transform 0.3s ease-in-out; /* add transition effect */
-}
-
-.image-grid img:hover {
-  transform: scale(1.2); /* zoom effect on hover */
-}
-
-
-
-		button {
-			background-color: #4CAF50;
-			border: none;
-			color: white;
-			padding: 10px 20px;
-			text-align: center;
-			text-decoration: none;
-			display: inline-block;
-			font-size: 16px;
-			margin: 4px 2px;
-			cursor: pointer;
-			border-radius: 8px;
-			transition: background-color 0.3s;
-		}
-		
-		button:hover {
-			background-color: #3e8e41;
-		}
-
+  .chart-container {
+    text-align: center;
+   
+  }
+  .row {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  .column {
+    flex: 1;
+    padding: 0 10px;
+  }
+  @media screen and (max-width: 1040px) {
+    .row {
+      flex-direction: column;
+    }
+    .column {
+      flex: none;
+      width: 100%;
+      padding: 0;
+    }
+  }
 .column {
 	width: 33.33%;
 	padding: 5px;
@@ -331,101 +960,24 @@ a {
 		}
 		
 		.chart table {
+		  color:white;
 			border-collapse: collapse;
 			width: 100%;
+			
 			text-align: left;
 		}
 		
-		.chart table th,
-		.chart table td {
-			padding: 5px;
-			border: 2px solid #6C5DD3;
-		}
-		
-		.social {
-			margin-top: 20px;
-		}
-		
-		.social ul {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-			display: flex;
-			justify-content: center;
-		}
-		
-		.social li {
-			margin: 0 10px;
-		}
-		
-		.social a {
-			color: #333;
-			text-decoration: none;
-		}
-		
-		.social i {
-			font-size: 24px;
-		}
-	</style>
-	<style>
-.glow-border {
-  display: inline-block; /* ensure the border takes the width of the h2 text */
-  border: 2px solid purple;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff8, 0 0 70px #ff8, 0 0 80px #ff8, 0 0 100px #ff8, 0 0 150px #ff8;
-  animation: glow 1s ease-in-out infinite alternate;
+.chart table th,
+.chart table td {
+  padding: 5px;
+  border: 2px solid #6C5DD3;
 }
 
-.glow-border h2 {
-  margin: 0; /* remove default margin of h2 */
+h2 {
+  color: white;
 }
-
-
-.glow-border {
-  display: inline-block; /* ensure the border takes the width of the h3 text */
-  border: 2px solid pink;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff8, 0 0 70px #ff8, 0 0 80px #ff8, 0 0 100px #ff8, 0 0 150px #ff8;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-.glow-border h3 {
-  margin: 0; /* remove default margin of h3 */
-}
-
-@keyframes glow {
-  from {
-    box-shadow: 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee;
-  }
-  to {
-    box-shadow: 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020;
-  }
-}
-
-
-
-@keyframes glow {
-  from {
-    box-shadow: 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee, 0 0 2px #0033ee;
-  }
-  to {
-    box-shadow: 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020, 0 0 4px #fe2020;
-  }
-}
-
-  .logo {
-    position: absolute;
-    top: -20px;
-    right: -12px;
-    width: 45px;
-    height: 45px;
-    border-radius: 20px;
-    background-color: none;
-  }
-  
 .question {
+  color:white;
   margin-bottom: 10px;
   border: 3px solid #6C5DD3;
   border-radius: 5px;
@@ -459,126 +1011,13 @@ a {
   border-width: 6px 0 6px 6px;
   border-color: transparent transparent transparent #666;
 }
-  .glow-border {
-    border: 1px solid #6C5DD3;
-    padding: 5px;
-    border-radius: 10px;
-    box-shadow: 0 0 50px #3a005e, 0 0 50px #000000, 0 0 50px #3a005e, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #3a005e, 0 0 50px #000000;
-    animation: glow 3s ease-in-out infinite alternate;
-  }
-
-  @keyframes glow {
-    from {
-      box-shadow: 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e;
-    }
-    to {
-      box-shadow: 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3;
-    }
-  }
-  img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    height: auto;
-  }
-
-  .glow-border {
-    border: 1px solid #6C5DD3;
-    border-radius: 2px;
-    padding: 5px;
-    text-align: center;
-    position: relative;
-  }
-
-  .logo {
-    position: absolute;
-    top: -25px;
-    right: -20px;
-    z-index: 1;
-  }
-
-  /* This styles the button inside the <a> tag */
-  a button {
-    background-color: #2B6DEF;
-    border: 2px solid white;
-    color: purple;
-  }
-
-  .chart-container {
-    text-align: center;
-  }
-  .row {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-  }
-  .column {
-    flex: 1;
-    padding: 0 10px;
-  }
-  @media screen and (max-width: 600px) {
-    .row {
-      flex-direction: column;
-    }
-    .column {
-      flex: none;
-      width: 100%;
-      padding: 0;
-    }
-  }
-
-  .cool-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: brown;
-    border: 2px solid black;
-    color: yellow;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-.metamask-logo {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    background-image: url('metamask.png');
-    background-size: cover;
-  }
-   h4 {
-  font-size: 35px;
-}
-   h4 {
-  color: #6C5DD3;
-}
-  /* This styles the button inside the <a> tag */
-  a button {
-    background-color:#6C5DD3;
-    border: 2px solid #3a005e;
-    color: white;
-  }
-
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .social-icons img {
-    height: 25px;
-    width: auto;
-    margin: 0 1px;
-  }
-
-  .social-icons a {
-    text-decoration: none;
-  }
-
+#profile-img {
+    width:70px;
+    height:auto;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+   }
   .button {
     border: 2px solid #6C5DD3; /* add border to button */
     padding: 5px; /* add padding to button */
@@ -618,70 +1057,6 @@ a {
     .social-icons a:hover img {
       filter: invert(100%) brightness(100%);
     }
-
-    .image-container {
-      position: relative;
-      display: inline-block;
-    }
-
-    .image-container img {
-      display: block;
-      width: 50%;
-      height: auto;
-    }
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      opacity: 0;
-      transition: opacity 0.5s;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .image-container:hover .overlay {
-      opacity: 1;
-    }
-
-    .overlay button {
-      display: block;
-      margin: auto;
-      padding: 10px 5px;
-      border: 2px solid white;
-      border-radius: 5px;
-      color: white;
-      font-weight: bold;
-      background-color: transparent;
-      transition: all 0.5s;
-    }
-
-    .overlay button:hover {
-      background-color: white;
-      color: black;
-    }
-  
-
-
-
-.nft-container img {
-  max-width: 40%;
-  transition: transform 0.2s ease-in-out;
-}
-
-.nft-container img:hover {
-  transform: scale(1.1);
-}
-
-#profile-img {
-    width:70px;
-    height:auto;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-   }
-
 .partners {
     display: inline-block;
     position: relative;
@@ -711,102 +1086,32 @@ a {
 .partners:hover .overlay {
     opacity: 1;
 }
+a {
+    color: pink;
+  }
+  .glow-border {
+    border: 1px solid #6C5DD3;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px #3a005e, 0 0 50px #000000, 0 0 50px #3a005e, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #3a005e, 0 0 50px #000000;
+    animation: glow 3s ease-in-out infinite alternate;
+  }
 
-    .red-img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e;
     }
-
-h2.glow-border.pink-text {
-  color: pink;
-}
-* {box-sizing: border-box;}
-.mySlides {display: none;}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Caption text */
-.text {
-  color: #FF10F0;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: block;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #6C5DD3;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: #6C5DD3;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
-
-.ads {
-  color: #39FF14;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: relative;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-.sub {
-  color: pink;
-  font-size: 10px;
-  padding: 8px 12px;
-  position: block;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-</style>
-
-</head>
-<body>
+    to {
+      box-shadow: 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3;
+    }
+  }
+      
+     
+    </style>
+  </head>
+  
+  
+  <body>
 <section class="top-nav">
   <div>
     <div class="logo-container">
@@ -822,215 +1127,195 @@ img {vertical-align: middle;}
     <li><a href="./roadmap" onclick="myFunction()">Roadmap</a></li>
     <li><a href="./whitepaper" onclick="myFunction()">Whitepaper</a></li>
     <li><a href="./spermotokendocs" onclick="myFunction()">SPERMO TOKEN Docs</a></li>
-    <li><a href="./burntspermo" onclick="myFunction()">Burned SPERMO TOKEN</a></li>
+
     <li><a href="./earnspermotoken" onclick="myFunction()">How to Start?</a></li>
     <li><a href="./support" onclick="myFunction()">Support</a></li>
     <li><a href="./about" onclick="myFunction()">About</a></li>
   </ul>
 </section>
-
-<h1>  🎨 </h1>
-  <p>
+<h1>.🤖</h1>
     
-  </p>
-  </div>
-  <div class="ads">
-    Advertise your project for 10 MATIC.
-    It will be displayed here on the header section of the page permanently.Your image is also clickable and point your project.
-  </div>
-  <a href="./advertise">
-  <div class="ads">Click here to Advertise</div></a>
-
-<div class="slideshow-container">
-
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <div class="glow-border">
-    <a href="https://play.google.com/store/apps/details?id=com.meta.vorz">
-      <img src="vorz.jpg" style="width:100%">
-    </a>
-  </div>
-  <a href="https://play.google.com/store/apps/details?id=com.meta.vorz">
-  <div class="text">Vorz App</div>
-  </a>
-  <div class="sub">Better than Tiktok!Create Videos,Earn Crypto,Sell NFTs,Promote Your Project.
-  All in one-app!</div>
-</div>
-
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <div class="glow-border">
-    <a href="your-link-url">
-      <img src="h.gif" style="width:100%">
-    </a>
-  </div>
-  <a href="./advertise">
-  <div class="text">Advertise Here</div>
-  </a>
-  <div class="sub">Promote and advertise your project here permanently for 10 MATIC</div>
-</div>
-
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <div class="glow-border">
-    <a href="your-link-url">
-      <img src="h1.gif" style="width:100%">
-    </a>
-  </div>
-  <a href="./advertise">
-  <div class="text">Advertise Here</div>
-  </a>
-  <div class="sub">Promote and advertise your project here permanently for 10 MATIC</div>
-</div>
-
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
-  <p>
     
+    <div class="landingpage">
+      <div class="navbar">
+        <a class="navlogo">ONCHAINSPERM</a>
+
+
+      </div>
+      <div class="box">
+        <div class="infobox">
+          <p class="infobox-boldtext">
+            Discover, collect, and Earn Passive Cryptocurrency in extraordinary NFT collectibles</p>
+          <p class="infobox-slimtext">
+            This project is focused on creating a platform that provides both crypto and NFT investors with a unique opportunity to earn passive income while adding value to their investments.
+          </p>
+<p class="infobox-slimtext">
+The project aims to create a mutually beneficial ecosystem that supports the growth of the crypto and NFT industries while generating consistent passive income for investors.
   </p>
+          <div class="infobox-btnwrapper">
+            <a href="./roadmap">
+            <button class="infobox-explorebtn selected">Roadmap</button></a>
+
+            <a href="./whitepaper">
+            <button class="infobox-createbtn">Whitepaper</button></a>
+          </div>
+        </div>
+        <div class="infobox">
+          <div class="infobox-btnwrapper">
+            <a href="./buyspermo">
+            <button class="infobox-explorebtn selected">Buy SPERMO</button></a>
+            <a href="./burntspermo">
+            <button class="infobox-createbtn">Burn SPERMO</button></a>
 
 
-<div style="text-align:center;">
- <img src="spermologo.png" width="100" height="300">
-<header>
-<h1>WELCOME TO ONCHAINSPERM! </h1>
-</header>
-<p style="font-weight: color: white">
-The project is focused on creating a platform that provides both crypto and NFT investors with a unique opportunity to earn passive income while adding value to their investments. </p>
-<p style="font-weight:color: white">
-The project aims to create a mutually beneficial ecosystem that supports the growth of the crypto and NFT industries while generating consistent passive income for investors.</p>
+            </div>
+            </div>
+        <div class="infobox">
+          <div class="infobox-btnwrapper">
+            <a href="https://opensea.io/collection/onchain-sperm">
+            <button class="infobox-explorebtn selected">Buy NFT on Opensea</button></a>
+            <a href="https://rarible.com/onchainsperm">
+            <button class="infobox-createbtn">Buy NFT on Rarible</button></a>
 
-
-<h2 class="glow-border pink-text">Gleam Giveaway Event</h2>
-
-
-  <img src="giveaway.jpg" width="320" height="auto"class="glow-img">
-<a href="https://gleam.io/competitions/xSpnd-onchain-sperm-2nd-giveaway">
-<p style="font-weight: bold; color: pink;">Enter Giveaway Here!</p></a>
-  
-<h2 class="glow-border">
-  <img src="spermologo.png" alt="Logo" class="logo">
-  ONCHAINSPERM
-</h2>
-<p style="font-weight: color: white">
-	ONCHAIN SPERM is a collection of 777 unique,On-chain NFTs that are stored its Images and Metadata on the blockchain. Each sperm has its own unique characteristics, making it a one-of-a-kind collectible.</p>
-<p style="font-weight: color: whitw">
-  An Innovative Way to Earn New Cryptocurrency and let NFT Holders to earn Passive income without Selling and staking their assets. </p>
-	
-	<h2 class="glow-border">Benefits for Holding SPERM NFT?</h2>
-<p style="font-weight: color: whitw">
-	This NFT is use to be a Ticket to access Giveaways, Airdrops and Private events.</p>
-<p style="font-weight: color: whitw">
-Aside from that this NFT will Reward its owner/holder with SPERMO TOKEN,
-	Just by holding on wallet.</p>
-<p style="font-weight: color: white">
-Its owner or holder will receive 0.01481 SPERMO TOKEN every 24hrs as long as they are holding this NFT.</p>
-<p style="font-weight: color: whitw">
-We have created a smart contract, that will mint SPERMO TOKEN and send it to the NFT owners,</p>
-<p style="font-weight: color: whitw">
-Which means every 24hrs all of the 777 ONCHAIN SPERM NFT will receive  0.01481 SPERMO TOKEN.</p>
-<p style="font-weight: color: white">
-Note that every single NFT will each receive equal Token, 
-	which means if you hold 2 NFTs then your daily Rewards is 2x instead of receiving 0.01481 you will receive
-	0.02962 SPERMO TOKEN.</p>
-<p style="font-weight: color: white">
-The more NFT you hold the more SPERMO TOKEN you will receive every 24hrs.</p>
-
-  <img src="pic.jpg" width="300" height="300"class="glow-img">
-
-<p class="glow-border" style="color: green;">Get Your Own ONCHAIN SPERM NFT and Start earning SPERMO Token!</p>
-
-</div>
-	<div style="text-align:center;">
-	<h2 class="glow-border">Start Receiving Airdrop Now!
-	</h2>
-	
+            </div>
+            </div>
+        <div class="infobox">
+          <div class="infobox-btnwrapper">
 <div style="display: flex; justify-content: center;">
   <a href="./add spermo token">
-    <button style="display: flex; align-items: center; font-size: 17px; padding: 5px 10px; height: 43px; border-radius: 3px;">
+    <button class="infobox-explorebtn selected">
       <span class="metamask-logo"></span>
       Add to Metamask
     </button>
   </a>
 </div>
-	
-  <a href="./buyspermo"><button>Buy SPERMO TOKEN</button></a>
-<a href="https://opensea.io/collection/onchain-sperm"><button>Buy NFT on OpenSea</button></a>
-
-
-<a href="https://rarible.com/onchainsperm"><button>Buy NFT on Rarible</button></a>
-
-<a href="./burntspermo"><button>Burned SPERMO</button></a>
-  <a href="./nft"><button>NFT Details</button></a>
-<p>
-  
-</p>
-<p style="font-weight: color: white;">
-	You can buy ONCHAIN SPERM on the <a href="https://opensea.io/collection/onchain-sperm">OpenSea</a> and 
-	<a href="https://rarible.com/onchainsperm">Rarible</a> marketplace.
-	And you can buy SPERMO TOKEN <a href="./buyspermo">Here</a>.
-	Each sperm is sold as a separate NFT, so you can choose the one you like the most.</p>
-	
-  
-
-	
-<div style="text-align:center;">
-    <h2></h2>
-    <button style="color:white; background-color:black; border:none; padding:10px 20px; border-radius:5px; font-size:16px; cursor:pointer;
-            animation: myanimation 15s infinite;">
-        SPERMO TOKEN
-    </button>
-<style>
-    @keyframes myanimation {
-        0% {
-            background-color: black;
-        }
-        50% {
-            background-color: #8B4513; /*brown*/
-        }
-        100% {
-            background-color: black;
-        }
-    }
-</style>
 </div>
+</div>
+<div class="infobox">
+          <div class="infobox-btnwrapper">
 
-  <img src="mint.jpg" width="300" height="300"class="glow-img">
+            <a href="./nft">
+            <button class="infobox-createbtn">Explore NFTs</button></a>
+
+            </div>
+            </div>
+	
+        
+        <div class="display">
+          <img class="display-nft" src="mint.jpg" alt="unsplash-OG44d93i-NJk" border="0">
+          <div class="infowrapper">
+            <div class="info">
+              <img class="info-img" src="https://raw.githubusercontent.com/onchain123/onchain/main/spermologo.png" alt="unsplash-OG44d93i-NJk" border="0">
+              <div>
+                <p>SPERMO TOKEN</p>
+
+              </div>
+      </div>
+            <div class="info2">
+              <p>BECOME A MINTER</p>
+              <div class="iconwrapper">
+                <svg width="22" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.7365 2C3.6575 2 1.5 3.8804 1.5 6.5135c0 3.1074 2.3236 5.9603 4.8612 8.1207 1.2458 1.0606 2.4954 1.9137 3.4352 2.5022.4692.2937.8593.5203 1.1305.6727L11 17.85l.0731-.0409a27.984 27.984 0 0 0 1.1304-.6727c.9399-.5885 2.1895-1.4416 3.4353-2.5022C18.1764 12.4738 20.5 9.6209 20.5 6.5135 20.5 3.8805 18.3425 2 16.2635 2c-2.1054 0-3.8008 1.389-4.552 3.6426a.75.75 0 0 1-1.423 0C9.5373 3.389 7.8418 2 5.7365 2ZM11 18.7027l.3426.6672a.7502.7502 0 0 1-.6852 0L11 18.7027ZM0 6.5135C0 3.052 2.829.5 5.7365.5 8.0298.5 9.8808 1.7262 11 3.6048 12.1192 1.7262 13.9702.5 16.2635.5 19.171.5 22 3.052 22 6.5135c0 3.8183-2.8014 7.06-5.3888 9.2628-1.3167 1.121-2.6296 2.0166-3.6116 2.6314-.4918.308-.9025.5467-1.1918.7092a19.142 19.142 0 0 1-.4301.2347l-.0248.013-.007.0036-.0021.0011c-.0003.0001-.0012.0006-.3438-.6666-.3426.6672-.3424.6673-.3426.6672l-.0033-.0017-.007-.0036-.0248-.013a19.142 19.142 0 0 1-.4301-.2347 29.324 29.324 0 0 1-1.1918-.7092c-.982-.6148-2.295-1.5104-3.6116-2.6314C2.8014 13.5735 0 10.3318 0 6.5135Z" fill="#E0E0E0"/>
+      </svg>
+                1M
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="box">
+        <div class="infobox">
+          <p class="infobox-boldtext">
+            Hold NFT to Earn SPERMO TOKEN</p>
+          <p class="infobox-slimtext">
+            ONCHAINSPERM NFT is use as a replacement for rigs, instead of using "Pow" and "Pos" technology we have decided to use NFT instead for the distribution of our SPERMO token.
+          </p>
+          <p class="infobox-slimtext">
+            The users will only need to hold the NFT for them to receive the minted SPERMO tokens (No more Staking).
+            The distribution of SPERMO TOKEN is automated and done once every 24 hours and the minting will continue everyday but will not exceed to the max supply of 21,000.
+            </p>
+          <p class="infobox-slimtext">
+            Who ever hold this NFT is eligible to receive SPERMO TOKEN every single day.</p>
+          <p class="infobox-slimtext">
+            The user must need to add the SPERMO TOKEN contract address to their Metamask wallet (Polygon) and hold this NFT and start receiving SPERMO TOKEN.
+            </p>
+          <p class="infobox-slimtext">
+             Every NFT can only mint 0.01481 SPERMO TOKEN every 24 hours, So if a user is holding 10 NFTs he will receive 0.1481 SPERMO TOKEN every 24 hours instead of 0.01481 SPERMO TOKEN. The more you hold the more SPERMO TOKEN you will be receiving.</p>
+          </div>
+          </div>
+      
+      
+      <div class="auction">
+        <div class="title">
+          <p class="titlebold">Hot Collections</p>
+          <a href="https://opensea.io/collection/onchain-sperm"><p class="titleslim">View all</p></a>
+        </div>
+        <div class="nft">
+          <div class=item>
+            <a href="https://opensea.io/assets/matic/0x11fb4e1db8c443291f4ad457b30d06e19a15b28e/103/">
+            <img class="item-img" src="https://raw.githubusercontent.com/onchain123/onchain/main/1.svg" alt="unsplash-OG44d93i-NJk" border="0"></a>
+            <div class="item-title">
+              <p>SPERM #103</p>
+              <p>1.1 MATIC</p>
+            </div>
+            <p class="item-date">Buy Now</p>
+          </div>
+          <div class=item>
+            <a href="https://opensea.io/assets/matic/0x11fb4e1db8c443291f4ad457b30d06e19a15b28e/102/">
+            <img class="item-img" src="https://raw.githubusercontent.com/onchain123/onchain/main/2.svg" alt="unsplash-OG44d93i-NJk" border="0"></a>
+            <div class="item-title">
+              <p>SPERM #102</p>
+              <p>1.1 MATIC</p>
+            </div>
+            <p class="item-date">Buy Now</p>
+          </div>
+          <div class=item>
+            <a href="https://opensea.io/assets/matic/0x11fb4e1db8c443291f4ad457b30d06e19a15b28e/101/">
+            <img class="item-img" src="https://raw.githubusercontent.com/onchain123/onchain/main/3.svg" border="0"></a>
+            <div class="item-title">
+              <p>SPERM #101</p>
+              <p>1.1 MATIC</p>
+            </div>
+            <p class="item-date">Buy Now</p>
+          </div>
+          <div class=item>
+            <a href="https://opensea.io/assets/matic/0x11fb4e1db8c443291f4ad457b30d06e19a15b28e/108/">
+            <img class="item-img" src="https://raw.githubusercontent.com/onchain123/onchain/main/fb732f21f6ce0eac7e0fab201bd4e12e.svg" alt="unsplash-OG44d93i-NJk" border="0"></a>
+            <div class="item-title">
+              <p>SPERM #108</p>
+              <p>1.1 MATIC</p>
+            </div>
+            <p class="item-date">Buy Now</p>
+          </div>
+        </div>
+      </div>
 
 <div class="chart-container">
   <div class="row">
     <div class="column">
       <div class="chart">
-        <h2>1 NFT = 0.01481 SPERMO/Day</h2>
+          <h2>SPERMO TOKEN Distribution</h2>
         <table>
           <tr>
             <th>MINTING DAYS</th>
             <td>REWARD</td>
           </tr>
           <tr>
-            <th>Daily Minting</th>
+            <th>Daily Minting per NFT</th>
             <td>0.01481</td>
           </tr>
           <tr>
-            <th>Monthly Minting</th>
+            <th>Monthly Minting per NFT</th>
             <td>0.4443</td>
           </tr>
           <tr>
-            <th>Yearly Minting</th>
+            <th>Yearly Minting per NFT</th>
             <td>5.4</td>
           </tr>
           <tr>
             <th>Minting Length</th>
-            <td>5 Years</td>
+            <td>Infinite</td>
           </tr>
         </table>
       </div>
@@ -1093,49 +1378,12 @@ The more NFT you hold the more SPERMO TOKEN you will receive every 24hrs.</p>
   </div>
 </div>
 
-  <p>
-    
-  </p>
-  <p>
-    
-  </p>
-  <p>
-    
-  </p>
-  <p>
-    
-  </p>
-  <p>
-    
-  </p>
-  <p>
-    
-  </p>
-<div style="text-align:center;">
-  <a href="./whitepaper" class="cool-button">Whitepaper</a>
-  <p>
-    
-  </p>
-  <a href="./roadmap" class="cool-button">RoadMap</a>
-  <p>
-    
-  </p>
-  <p>
-    
-  </p>
+      <div class="started">
 
-  <p>
-    
-  </p>
-  <p>
-    </p>
-    <p>
-      
-    </p>
-
-<p style="font-weight: bold;">
+  <p class="started-boldtext">
   ___________FAQS___________
   </p>
+  </div>
   <p>
     
   </p>
@@ -1213,52 +1461,160 @@ Second, holding SPERMO TOKEN may also yield MATIC Tokens in the future developme
   Even We the creator cannot mint a new  token for our self, since the launching of SPERMO TOKEN is FAIR. It requires the creator to hold its own NFT in-order to get its own token.</p>
   </div>
 </div>
-  <p>
-    
-  </p>
-  <h4>
-    NFT COLLECTION
-  </h4>
-  <p>
-    
-  </p>
-<div class="image-box">
-  <div class="image-grid">
-    <a href="https://opensea.io/collection/onchain-sperm"><img src="31.jpg"></a>
-    <a href="https://opensea.io/collection/onchain-sperm"><img src="32.jpg"></a>
-    <a href="https://opensea.io/collection/onchain-sperm"><img src="33.jpg"></a>
-    <a href="https://opensea.io/collection/onchain-sperm"><img src="34.jpg"></a>
-    <a href="https://opensea.io/collection/onchain-sperm"><img src="36.jpg"></a>
-    <a href="https://opensea.io/collection/onchain-sperm"><img src="30.jpg"></a>
-  </div>
-</div>
-	<div style="text-align:center;">
-	<h2>BUY NFT NOW!
-	</h2>
-<a href="https://opensea.io/collection/onchain-sperm"><button>Buy Now on OpenSea</button></a>
 
-<a href="https://rarible.com/onchainsperm"><button>Buy Now on Rarible</button></a>
-</div>
+      
+      <div class="started">
+        <p class="started-boldtext">What Make's ONCHAINSPERM NFT Unique from other NFT collectibles?</p>
+        <p class="started-slimtext">Unlike from other NFT collectibles were they just simply minted on Opensea or stored their NFT images and metadata on the IPFS, ONCHAINSPERM NFT do not rely on any storage provider like IPFS  Because ONCHAINSPERM NFT does stored its images and metadata solely and directly on the blockchain, in other words the nft image is actually stored,cannot be touched nor delete by anyone cause its immutable inside the blockchain.</p><p class="started-slimtext">It has the ability to yield Cryptocurrency just by holding on wallet, Unlike to other NFT collectible were they just simply bought and hold this NFT can be traded and also generate crypto just by holding.</p>
+        <div class="started-items">
+          <div class="itemwrapper">
+            <div class="started-items-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                <path style="stroke:none;fill-rule:nonzero;fill:#e0e0e0;fill-opacity:1" d="M24.7969 14.6719c.4375-.4414.4375-1.1524 0-1.5938-.4414-.4375-1.1524-.4375-1.5938 0L16.5 19.7851l-2.9531-2.957c-.4414-.4375-1.1524-.4375-1.5938 0-.4375.4414-.4375 1.1524 0 1.5938l3.75 3.75a1.1246 1.1246 0 0 0 1.5938 0Zm0 0"/>
+                <path style="stroke:none;fill-rule:evenodd;fill:#e0e0e0;fill-opacity:1" d="M18.8086.957a2.6005 2.6005 0 0 0-1.6172 0L4.8164 4.9688C3.7344 5.3202 3 6.3241 3 7.4648V15c0 9.2852 5.6563 16.0586 14.1016 19.246a2.5853 2.5853 0 0 0 1.7968 0C27.3438 31.0587 33 24.2853 33 15V7.4648a2.6182 2.6182 0 0 0-1.8164-2.496Zm-.9219 2.1368a.3738.3738 0 0 1 .2266 0l12.375 4.0117c.1601.0547.2617.1992.2617.3593V15c0 8.1914-4.9219 14.2227-12.6445 17.1367a.2815.2815 0 0 1-.211 0C10.172 29.2227 5.25 23.1914 5.25 15V7.4648c0-.1601.1016-.3046.2617-.3593Zm0 0"/>
+              </svg>
+    </div>
+            <p>Secure and Immutable</p>
+          </div>
+          <div class="itemwrapper">
+            <div class="started-items-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+        <path style="stroke:none;fill-rule:evenodd;fill:#bdbdbd;fill-opacity:1" d="M4.125 3C2.6758 3 1.5 4.1758 1.5 5.625v5.25c0 1.4492 1.1758 2.625 2.625 2.625h27.75c1.4492 0 2.625-1.1758 2.625-2.625v-5.25C34.5 4.1758 33.3242 3 31.875 3Zm27.75 2.25H4.125c-.207 0-.375.168-.375.375v5.25c0 .207.168.375.375.375h27.75c.207 0 .375-.168.375-.375v-5.25c0-.207-.168-.375-.375-.375Zm0 0"/>
+        <path style="stroke:none;fill-rule:nonzero;fill:#bdbdbd;fill-opacity:1" d="M4.125 15c.621 0 1.125.504 1.125 1.125v14.25c0 .207.168.375.375.375h24.75c.207 0 .375-.168.375-.375v-14.25c0-.621.504-1.125 1.125-1.125S33 15.504 33 16.125v14.25C33 31.8242 31.8242 33 30.375 33H5.625C4.1758 33 3 31.8242 3 30.375v-14.25C3 15.504 3.504 15 4.125 15Zm0 0"/>
+        <path style="stroke:none;fill-rule:nonzero;fill:#bdbdbd;fill-opacity:1" d="M14.625 17.25c-.621 0-1.125.504-1.125 1.125s.504 1.125 1.125 1.125h6.75c.621 0 1.125-.504 1.125-1.125s-.504-1.125-1.125-1.125Zm0 0"/>
+      </svg>
+            </div>
+            <p>Supported by multiple wallets</p>
+          </div>
+          <div class="itemwrapper">
+            <div class="started-items-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="px" viewBox="0 0 36 31">
+        <path style="stroke:none;fill-rule:evenodd;fill:#bdbdbd;fill-opacity:1" d="M2.832 2.9219c-.2148 0-.3867.1758-.3867.3906v24.375c0 .2148.1719.3906.3867.3906h4.9453l13.332-14.1875c1.0548-1.121 2.8165-1.1445 3.8985-.0508l8.5469 8.6407V3.3125c0-.2148-.1719-.3906-.3867-.3906Zm30.336 27.5156H2.832c-1.5039 0-2.7226-1.2305-2.7226-2.75V3.3125c0-1.5195 1.2187-2.75 2.7226-2.75h30.336c1.5039 0 2.7226 1.2305 2.7226 2.75v24.375c0 1.5195-1.2187 2.75-2.7226 2.75ZM22.8008 15.5156 10.996 28.0781H33.168c.2148 0 .3867-.1758.3867-.3906v-1.871L23.3594 15.5077a.388.388 0 0 0-.5586.0078Zm-9.4688-4.3398c0 1.5195-1.2187 2.75-2.7226 2.75-1.5 0-2.7188-1.2305-2.7188-2.75 0-1.5196 1.2188-2.75 2.7188-2.75 1.5039 0 2.7226 1.2304 2.7226 2.75Zm2.336 0c0 2.8242-2.2657 5.1094-5.0586 5.1094-2.789 0-5.0547-2.2852-5.0547-5.1094s2.2656-5.1094 5.0547-5.1094c2.793 0 5.0586 2.2852 5.0586 5.1094Zm0 0"/>
+      </svg>
+            </div>
+            <p>The NFT image is stored directly on the blockchain and not on IPFS</p>
+          </div>
+          <div class="itemwrapper">
+            <div class="started-items-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+        <path style="stroke:none;fill-rule:evenodd;fill:#bdbdbd;fill-opacity:1" d="M30.9453.5a16.7245 16.7245 0 0 0-11.4687 4.5508l-2.0274 1.914a35.9135 35.9135 0 0 0-2.3984 2.4805h-7.836c-.957 0-1.8437.5-2.3359 1.3203L.668 17.7891c-.1952.3242-.2226.7226-.0702 1.0664.1523.3476.4609.5976.828.6758l7.1134 1.496c.0586.0782.125.1485.1992.2188l3.1054 2.914 2.9102 3.1016c.0703.0742.1406.1406.2188.1992l1.496 7.1133c.0782.3672.3282.6758.6758.8281a1.158 1.158 0 0 0 1.0664-.0703l7.0235-4.211a2.7222 2.7222 0 0 0 1.3203-2.3358v-7.836a36.8748 36.8748 0 0 0 2.4844-2.3984l1.9101-2.0274A16.7411 16.7411 0 0 0 35.5 5.0508l-.004-1.8281C35.496 1.7187 34.2774.5 32.7774.5Zm-6.7226 22.3398a39.89 39.89 0 0 1-1.582 1.1172l-5.2813 3.5196 1.0547 5.0156 5.621-3.3711c.1172-.0703.1876-.1992.1876-.336ZM8.5234 18.6406l3.5196-5.2812a34.8776 34.8776 0 0 1 1.1172-1.582H7.2148a.3952.3952 0 0 0-.3359.1913L3.508 17.586ZM21.0781 6.75a14.3862 14.3862 0 0 1 9.8672-3.918h1.832c.211 0 .3868.1758.3868.3907v1.828c0 3.672-1.3985 7.2032-3.9141 9.8712l-1.9102 2.0273a34.7388 34.7388 0 0 1-5.996 5.0664l-5.1133 3.4102-2.711-2.8906c-.0195-.0157-.0351-.0352-.0547-.0508l-2.8906-2.7149 3.4102-5.1172c1.457-2.1796 3.1523-4.1914 5.0625-5.9921Zm5.4766 5.0273c0 1.2891-1.043 2.332-2.332 2.332-1.2891 0-2.332-1.0429-2.332-2.332 0-1.289 1.0429-2.332 2.332-2.332 1.289 0 2.332 1.043 2.332 2.332ZM9.4453 32c1.3985-1.3984 1.3985-4.043 0-5.4453-1.4023-1.3985-4.0469-1.3985-5.4453 0-1.879 1.8828-2.246 6.0703-2.3164 7.3789a.3609.3609 0 0 0 .3828.3828C3.375 34.2461 7.5625 33.879 9.4454 32Zm0 0"/>
+      </svg>
+            </div>
+            <p>Low Market Cap</p>
+          </div>
+        </div>
+      </div>
+      <div class="discover">
+        <div class="discover-title">
+          <p>Discover ONCHAINSPERM NFT</p>
+          <div class="filters">
+            <div class="filter">
+             
+      <path style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke:#f2f2f2;stroke-opacity:1;stroke-miterlimit:4" d="M1.731 1.002h13.1976M1.731 4.998h9.134M1.731 9h6.0893m4.0636 0 4.0575-4.002m0 0L20.005 9m-4.0636-4.002v12" transform="scale(.63636 .66667)"/>
+    </svg>
+              
+      <path style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke:#f2f2f2;stroke-opacity:1;stroke-miterlimit:4" d="M15.4787 1.002 8.3732 7.998 1.2678 1.002" transform="scale(.64706 .66667)"/>
+    </svg>
+
+      <path style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke:#f2f2f2;stroke-opacity:1;stroke-miterlimit:4" d="M15.4787 1.002 8.3732 7.998 1.2678 1.002" transform="scale(.64706 .66667)"/>
+    </svg>
+            </div>
+
+      <path style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke:#fff;stroke-opacity:1;stroke-miterlimit:4" d="M1.1546 1.9978c0-.5525.4553-.999 1.0028-.999h16.273c.5537 0 1.0028.4465 1.0028.999v2.578c0 .2735-.1046.5358-.3014.72l-6.5092 6.4062c-.1846.1897-.2953.4464-.2953.7199V15l-4.0606 4.0011V12.422c0-.2735-.1046-.5302-.3015-.7199l-6.503-6.4062c-.1907-.1842-.3076-.4465-.3076-.72Zm0 0" transform="matrix(.63492 0 0 .7 .3333 0)"/>
+    </svg>
+             
+          </div>
+        </div>
+        <div class="discover-items">
+          <div class=item>
+            <img class="item-img" src="30.jpg" alt="unsplash-OG44d93i-NJk" border="0">
+            <div class="item-title">
+              <p>50% of this NFT image is generated from the blockchain and the 50% remaining is created by my own hand. This NFT is completely made of codes and stored directly on the blockchain no IPFS or any centralized storage provider only blockchain!</p>
+            
+            </div>
+
+          </div>
+          <div class=item>
+            <img class="item-img" src="eye.jpg" alt="unsplash-OG44d93i-NJk" border="0">
+            <div class="item-title">
+              <p>Every ONCHAINSPERM NFT have generated their own unique names, Yes they have a name! And they created that name theme selves.</p>
+             
+            </div>
+
+          </div>
+          <div class=item>
+            <img class="item-img" src="spermologo.png" border="0">
+            <div class="item-title">
+              <p>One of the unique feature of ONCHAINSPERM NFT is the ability to yield cryptocurrency, this is done every 24hrs. And SPERMO TOKEN is the Cryptocurrency that can be earned by holding this NFT.
+              Learn more about SPERMO TOKEN <a href="./whitepaper">here</a></p>
+       
+            </div>
+
+<p>
   
-  <p>
-    
-  </p>
-  <img src="hold.gif" width="300" height="300"class="glow-img">
-  <p>
-    
-  </p>
-  <h2>TEAM</h2>
-  </div>
-  <p>
-    
-  </p>
-  <p>
-    
-  </p>
-  <p>
-    
-  </p>
-	<footer>
+</p>
+
+
+      <div class="footer">
+        <div class="footer-main">
+          ONCHAINSPERM NFT brings an innovative way to earn crypto without staking or selling your NFTs. Buying and holding an NFT that can yield and worth $1 dollar is not a risky descision
+         however we are not a financial adviser and do not take this as a financial advise always do your own research and always count your own risk! </div>
+
+
+
+	<div style="text-align:center;">
+<div class="footer-main">
+	<h2 >Automated Smart Contract Audit
+	</h2></div>
+<div class="partners">
+    <a href="https://www.cyberscope.io/cyberscan?network=MATIC&address=0x73cb87FdAfF7E653A2b2Ca8Ab5b53a1b4F031127">
+        <img src="cyberscope.jpg" alt="your image description" class="glow-border">
+        <div class="overlay">
+        </div>
+    </a>
+</div>
+<div class="footer-main">
+	<h2 >Echosystem
+	</h2></div>
+<div class="partners">
+    <a href="https://polygonscan.com/token/0x73cb87FdAfF7E653A2b2Ca8Ab5b53a1b4F031127">
+        <img src="polygon.png" alt="your image description" class="glow-border">
+        <div class="overlay">
+        </div>
+    </a>
+</div>
+<p>
+  
+</p>
+<div class="partners">
+    <a href="https://opensea.io/collection/onchain-sperm">
+        <img src="opensea.jpg" alt="your image description" class="glow-border">
+        <div class="overlay">
+        </div>
+    </a>
+</div>
+<p>
+  
+</p>
+<div class="partners">
+    <a href="https://rarible.com/onchainsperm">
+        <img src="rarible.jpg" alt="your image description" class="glow-border">
+        <div class="overlay">
+        </div>
+    </a>
+</div>
+         <p>
+           
+         </p>
+         <p>
+           
+         </p>
+         <p>
+           
+         </p>
+        
+<div class="footer-main">
+         <h2> Team</h2></div>
 <div style="text-align:center;">
   <img id="profile-img" src="creatorlogo.jpg" width="150" height="auto">
 <div style="display: flex; justify-content: center;">
@@ -1279,8 +1635,8 @@ Second, holding SPERMO TOKEN may also yield MATIC Tokens in the future developme
   Developer</p>
 
 		</div>
-		</footer>
-	<footer>
+
+
 <div style="text-align:center;">
   <img id="profile-img" src="market.jpg" width="150" height="auto">
 <div style="display: flex; justify-content: center;">
@@ -1295,19 +1651,9 @@ Second, holding SPERMO TOKEN may also yield MATIC Tokens in the future developme
   Marketing Head</p>
 
 		</div>
-		</footer>
-		
-		<p>
-		  
-		</p>
 
-  <p>
-    
-  </p>
-
-<div class="social">
 	<div style="text-align:center;">
-  <h2>YOU CAN FIND US ON:</h2>
+  <h2>YOU CAN FIND US ON</h2>
 </div>
 <div style="text-align:center;">
 
@@ -1344,53 +1690,6 @@ Second, holding SPERMO TOKEN may also yield MATIC Tokens in the future developme
   </a>
 </div>
 </div>
-</div>
-
-
-	<div style="text-align:center;">
-	<h2 >Automated Smart Contract Audit
-	</h2>
-<div class="partners">
-    <a href="https://www.cyberscope.io/cyberscan?network=MATIC&address=0x73cb87FdAfF7E653A2b2Ca8Ab5b53a1b4F031127">
-        <img src="cyberscope.jpg" alt="your image description" class="glow-border">
-        <div class="overlay">
-        </div>
-    </a>
-</div>
-	
-	
-	<h2 >Echosystem
-	</h2>
-<div class="partners">
-    <a href="https://www.polygon.technology/">
-        <img src="polygon.png" alt="your image description" class="glow-border">
-        <div class="overlay">
-        </div>
-    </a>
-</div>
-<p>
-  
-</p>
-<div class="partners">
-    <a href="https://www.opensea.io/">
-        <img src="opensea.jpg" alt="your image description" class="glow-border">
-        <div class="overlay">
-        </div>
-    </a>
-</div>
-<p>
-  
-</p>
-<div class="partners">
-    <a href="https://www.rarible.com/">
-        <img src="rarible.jpg" alt="your image description" class="glow-border">
-        <div class="overlay">
-        </div>
-    </a>
-</div>
-<p>
-  
-</p>
 	<div style="text-align:center;">
 <p style="font-weight: bold; color: pink;">
   Get Support</p>
@@ -1399,6 +1698,86 @@ Second, holding SPERMO TOKEN may also yield MATIC Tokens in the future developme
 style="font-weight: bold; color: blue;">Click Here</p></a>
 </div>
 
+         
+         
+        <div class="footer-navigate">
+          <div class="nav">
+            <h5>Marketplace</h5>
+            <a href="https://opensea.io/collection/onchain-sperm"><p>Opensea</p></a>
+            <a href="https://rarible.com/onchainsperm"><p>Rarible</p>
+            </a>
+          </div>
+          <div class="nav">
+            <h5>Creator</h5>
+            <a href="https://twitter.com/criptotradeir?t=tZ6cJqJDL-IA6wZ-z7gRvQ&s=09" ><p>About Us</p></a>
+
+          </div>
+          <div class="nav">
+            <h5>Socials</h5>
+            <a href="https://www.facebook.com/profile.php?id=100091389517044">
+            <p>Facebook</p></a>
+            <a href="https://instagram.com/onchainsperm?igshid=ZDdkNTZiNTM=">
+            <p>Instagram</p></a>
+            <a href="https://discord.gg/uMYCXY59Qz">
+            <p>Discord</p></a>
+            <a href="https://medium.com/@criptotrader32"
+            ><p>Medium</p></a>
+            <a href="https://twitter.com/onchainsperms?t=rG0KyVwdG_Spq9ADrpO1VQ&s=09"
+            ><p>Twitter</p></a>
+            <a href="./support">
+            <p>Email</p></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer2">
+        
+
+   <p>
+      <a href="./terms of service">Terms of Service</a>
+   </p>
+</div>
+      <div class="footer2">
+        
+   <p>
+      <a href="./privacy policy">Privacy Policy</a>
+   </p>
+   </div>
+
+      <div class="footer2">
+        
+   <p>
+      <a href="./coockies policy">Coockies Policy</a>
+   </p>
+</div>
+<a href="#" id="open_preferences_center">Update cookies preferences</a>
+      <div class="footer2">
+        
+  <p style="font-size: 8px;">&copy; 2023 ONCHAIN SPERM. All rights reserved.</p>
+
+      </div>
+    </div>
+    
+    
+    
+<script>
+const questions = document.querySelectorAll('.question');
+
+questions.forEach(function(question) {
+  const questionHeader = question.querySelector('h3');
+  questionHeader.addEventListener('click', function() {
+    console.log('Question clicked!');
+    question.classList.toggle('open');
+  });
+});
+
+
+</script>
+<script>
+function myFunction() {
+  // do something when the link is clicked
+}
+</script>
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
 <script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
 <script type="text/javascript" charset="UTF-8">
@@ -1471,7 +1850,7 @@ cookieconsent.run({"notice_banner_type":"headline","consent_type":"express","pal
 
 <!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID parameter. Place it where appropriate, style it as needed. -->
 
-<a href="#" id="open_preferences_center">Update cookies preferences</a>
+
 
   <div id="cookie-banner">
     <p>This website uses cookies to improve your experience. By clicking "Accept", you consent to the use of cookies.</p>
@@ -1479,70 +1858,6 @@ cookieconsent.run({"notice_banner_type":"headline","consent_type":"express","pal
     <button onclick="declineCookies()">Decline</button>
   </div>
 
-
-
-<footer>
-   <p>
-      <a href="./terms of service">Terms of Service</a>
-   </p>
-</footer>
-<footer>
-   <p>
-      <a href="./privacy policy">Privacy Policy</a>
-   </p>
-</footer>
-<footer>
-   <p>
-      <a href="./coockies policy">Coockies Policy</a>
-   </p>
-</footer>
-<footer>
-  <p style="font-size: 8px;">&copy; 2023 ONCHAIN SPERM. All rights reserved.</p>
-</footer>
-
-
 </div>
-
-<script>
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 4000); // Change image every 2 seconds
-}
-</script>
-
-<script>
-const questions = document.querySelectorAll('.question');
-
-questions.forEach(function(question) {
-  const questionHeader = question.querySelector('h3');
-  questionHeader.addEventListener('click', function() {
-    console.log('Question clicked!');
-    question.classList.toggle('open');
-  });
-});
-
-
-</script>
-
-<script>
-function myFunction() {
-  // do something when the link is clicked
-}
-</script>
-</body>
+  </body>
 </html>
