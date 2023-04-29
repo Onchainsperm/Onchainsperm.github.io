@@ -19,58 +19,6 @@ images.forEach(img => {
 
 </script>
 
- <script>
-    function setCookie(cname, cvalue, exdays) {
-      var d = new Date();
-      d.setTime(d.getTime() + (exdays*24*60*60*1000));
-      var expires = "expires="+ d.toUTCString();
-      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-    }
-
-    function getCookie(cname) {
-      var name = cname + "=";
-      var decodedCookie = decodeURIComponent(document.cookie);
-      var ca = decodedCookie.split(';');
-      for(var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-          c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-          return c.substring(name.length, c.length);
-        }
-      }
-      return "";
-    }
-
-    function acceptCookies() {
-      setCookie("cookieConsent", "accepted", 365);
-      hideBanner();
-    }
-
-    function declineCookies() {
-      setCookie("cookieConsent", "declined", 365);
-      hideBanner();
-    }
-
-    function hideBanner() {
-      var banner = document.getElementById("cookie-banner");
-      banner.style.display = "none";
-    }
-
-    function showBanner() {
-      var banner = document.getElementById("cookie-banner");
-      banner.style.display = "block";
-    }
-
-    window.onload = function() {
-      if (getCookie("cookieConsent") == "accepted") {
-        hideBanner();
-      } else {
-        showBanner();
-      }
-    }
-  </script>
 
     
     <style>
@@ -1149,7 +1097,10 @@ a {
           <p class="infobox-boldtext">
             What is ONCHAIN SPERM?</p>
           <p class="infobox-slimtext">
-            ONCHAIN SPERM is a blockchain project that aims to provide value for both non-fungible tokens (NFTs) and cryptocurrencies. The project was conceptualized and developed by Kevin Deniega.
+            ONCHAIN SPERM is a blockchain project that aims to provide value for both non-fungible tokens (NFTs) and cryptocurrencies.</p>
+          <p class="infobox-slimtext">
+              ONCHAINSPERM is an innovative NFT and Crypto project that aims to provide passive income to NFT and Crypto investors without the need to trade their assets.
+            The project was conceptualized and developed by <a href="https://twitter.com/criptotradeir?t=o13zHTThOUGO4gu4SF8QVg&s=09">Kevin Deniega.</a>
   </p>
        
         </div>
